@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 
-const Home: NextPage = () => {
+const Post: NextPage = () => {
   return (
     <div>
-      <h1>Home page</h1>
+        <h1>Post page</h1>
     </div>
   );
 };
 
-export default Home;
+export default Post;
