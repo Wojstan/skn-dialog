@@ -1,13 +1,16 @@
-
 import type { NextPage } from "next";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const Posts: NextPage = () => {
-    return (
-      <div>
-          <h1>Posts page</h1>
-      </div>
-    );
-  };
-  
-  export default Posts;
-  
+  return (
+    <Container>
+      <Row>
+        <Col>Posts page</Col>
+      </Row>
+    </Container>
+  );
+};
+
+export default Posts;
