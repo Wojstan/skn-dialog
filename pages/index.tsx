@@ -8,6 +8,7 @@ const Home: NextPage = () => {
     <Container>
       <Row>
         <Col>Home page</Col>
+        <i className="fa-brands fa-facebook"></i>
       </Row>
     </Container>
   );
