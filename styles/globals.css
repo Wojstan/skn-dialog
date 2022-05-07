@@ -18,6 +18,11 @@ body {
   font-family: "Arsenal", sans-serif !important;
 }
 
+h1 {
+  text-align: center;
+  margin-bottom: 1.5vh !important;
+}
+
 h1,
 h2 {
   color: var(--blue);
@@ -71,4 +76,32 @@ strong {
 
 a {
   text-decoration: none !important;
+}
+
+a svg {
+  color: var(--blue);
+  font-size: 1.5rem;
+}
+
+.active a {
+  font-weight: 700;
+  color: var(--blue) !important;
+}
+
+.main-logo {
+  background: url("/img/sofa.png");
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 35vh;
+}
+
+section {
+  padding: 7vh 0;
+}
+
+.bg-gray {
+  background-color: #f8f8f8;
 }
