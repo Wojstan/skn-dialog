@@ -3,15 +3,14 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SSRProvider from "react-bootstrap/SSRProvider";
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <SSRProvider>
       <Head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        />
         <title>SKN Dialog</title>
         <meta
           name="description"
