@@ -1,5 +1,6 @@
 import Layout from "@global/Layout/Layout";
 import type { NextPage } from "next";
+import parse from "html-react-parser";
 import getPosts from "../../utils/getPosts";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -9,7 +10,7 @@ const Post: NextPage = ({ post }: any) => {
     <Layout>
       <Container>
         <Row>Title: {post.title}</Row>
-        <Row>Content: {post.content}</Row>
+        <Row>Content: {parse(post.content)}</Row>
         <Row>ID: {post._id}</Row>
       </Container>
     </Layout>
