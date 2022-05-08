@@ -39,6 +39,12 @@ const Post: NextPage = ({ post }: any) => {
           <img src={post.thumbnail} alt="post-image" className="" />
         </Row>
         <Row>{parse(post.content)}</Row>
+        {post.bibliography && (
+          <Row className="post-bibliography">
+            <hr className="my-4" />
+            {parse(post.bibliography)}
+          </Row>
+        )}
       </Container>
     </Layout>
   );

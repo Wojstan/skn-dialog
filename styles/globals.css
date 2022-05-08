@@ -41,7 +41,8 @@ p {
   color: var(--dark);
 }
 
-small {
+small,
+.post-bibliography p {
   color: var(--light);
   font-size: 1rem !important;
 }
