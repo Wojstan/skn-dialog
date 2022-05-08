@@ -118,3 +118,8 @@ section {
   transition: 0.5s;
   color: var(--dark);
 }
+
+.share-icon {
+  color: var(--blue);
+  cursor: pointer;
+}
