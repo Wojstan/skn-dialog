@@ -12,11 +12,11 @@
   margin-bottom: 0;
 }
 
-.link {
+.menu ul li {
   margin: 0.5rem 1rem;
   font-size: 1.1rem;
 }
 
-.link a {
+.menu ul li a {
   color: #323232;
 }

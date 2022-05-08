@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import Link from "next/link";
 
 import styles from "./Menu.module.css";
+import MenuLink from "./MenuLink/MenuLink";
 
 const menuData = [
   {
@@ -33,15 +33,13 @@ const Menu = () => (
 
     <ul>
       {menuData.map((row, i) => (
-        <li className={`${styles.link} ${i === 0 ? "active" : ""}`} key={i}>
-          {row.link ? (
-            <Link href={row.link}>{row.label}</Link>
-          ) : (
-            <a className={styles.icon} href={row.exLink}>
-              {row.label}
-            </a>
-          )}
-        </li>
+        <MenuLink
+          key={i}
+          link={row.link}
+          exLink={row.exLink}
+          label={row.label}
+          active={i === 0}
+        />
       ))}
     </ul>
   </nav>
