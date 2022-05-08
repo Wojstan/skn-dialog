@@ -46,7 +46,7 @@ small {
   font-size: 1rem !important;
 }
 
-input,
+input [type="email"],
 button {
   outline: none;
   font-family: "Arsenal", sans-serif !important;
@@ -54,12 +54,15 @@ button {
   border: none;
 }
 
-input {
-  background-color: #f8f8f8;
+input[type="email"] {
+  background-color: white;
   color: var(--dark);
   border-radius: 10px;
-  min-width: 320px;
   font-size: 1.1rem;
+  display: inline-block !important;
+  min-width: 380px !important;
+  padding: 0.8rem 1rem !important;
+  width: auto !important;
 }
 
 button {
@@ -122,4 +125,12 @@ section {
 .share-icon {
   color: var(--blue);
   cursor: pointer;
+}
+
+.home-describe {
+  margin-bottom: 5vh;
+}
+
+.form-check-input:checked {
+  background-color: var(--blue) !important;
 }

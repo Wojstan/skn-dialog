@@ -7,8 +7,9 @@ import Projects from "@Home/Projects/Projects";
 import HomePosts from "@Home/HomePosts/HomePosts";
 import Newsletter from "@Home/Newsletter/Newsletter";
 import Partners from "@Home/Partners/Partners";
+import getPosts from "../utils/getPosts";
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ posts }: any) => {
   return (
     <Layout>
       <div className="main-logo">
@@ -24,7 +25,7 @@ const Home: NextPage = () => {
       </Section>
 
       <Section>
-        <HomePosts />
+        <HomePosts posts={posts} />
       </Section>
 
       <Section gray>
@@ -37,5 +38,19 @@ const Home: NextPage = () => {
     </Layout>
   );
 };
+
+export async function getServerSideProps() {
+  const { posts } = await getPosts();
+
+  if (!posts) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: { posts },
+  };
+}
 
 export default Home;
