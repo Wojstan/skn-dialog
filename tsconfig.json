@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": "app",
+    "paths": {
+      "@About/*": ["components/About/*"],
+      "@global/*": ["components/global/*"],
+      "@Home/*": ["components/Home/*"],
+      "@Posts/*": ["components/Posts/*"],
+      "@hooks/*": ["hooks/*"]
+    },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

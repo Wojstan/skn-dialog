@@ -1,0 +1,49 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    360deg,
+    rgba(221, 221, 221, 0.7) -7.78%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  padding: 1.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.4s;
+  z-index: 5;
+  backdrop-filter: blur(8px);
+  min-height: 82px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.menu ul li {
+  margin: 0.5rem 1rem;
+  font-size: 1.1rem;
+}
+
+.menu ul li a {
+  color: #323232;
+}
+
+.hide {
+  transform: translate3d(0, -100%, 0);
+}
+
+.show {
+  transform: none;
+}
+
+@media screen and (max-width: 766px) {
+  .menu ul {
+    display: none;
+  }
+}

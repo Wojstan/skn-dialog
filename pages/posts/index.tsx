@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import Layout from "@global/Layout/Layout";
 
-const About: NextPage = () => {
+const Posts: NextPage = () => {
   return (
     <Layout>
-      <h1>About</h1>
+      <h1>Posts</h1>
     </Layout>
   );
 };
 
-export default About;
+export default Posts;

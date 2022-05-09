@@ -5,6 +5,7 @@
   --blue: #16649b;
   --light: #8b8b8b;
   --dark: #323232;
+  --hover: #1786d4;
 }
 
 * {
@@ -16,6 +17,11 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Arsenal", sans-serif !important;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5vh !important;
 }
 
 h1,
@@ -36,11 +42,13 @@ p {
   color: var(--dark);
 }
 
-small {
+small,
+.post-bibliography p {
   color: var(--light);
+  font-size: 1rem !important;
 }
 
-input,
+input [type="email"],
 button {
   outline: none;
   font-family: "Arsenal", sans-serif !important;
@@ -48,12 +56,15 @@ button {
   border: none;
 }
 
-input {
-  background-color: #f8f8f8;
+input[type="email"] {
+  background-color: white;
   color: var(--dark);
   border-radius: 10px;
-  min-width: 320px;
   font-size: 1.1rem;
+  display: inline-block !important;
+  min-width: 380px !important;
+  padding: 0.8rem 1rem !important;
+  width: auto !important;
 }
 
 button {
@@ -61,6 +72,11 @@ button {
   color: var(--white);
   background-color: var(--blue);
   min-width: 130px;
+}
+
+button:hover {
+  background-color: var(--hover) !important;
+  transition: all 0.2s linear;
 }
 
 strong {
@@ -71,4 +87,95 @@ strong {
 
 a {
   text-decoration: none !important;
+}
+
+a:hover,
+a svg:hover {
+  color: var(--hover) !important;
+  transition: all 0.2s linear;
+}
+
+a svg {
+  color: var(--blue);
+  font-size: 1.5rem;
+}
+
+.active a {
+  font-weight: 700;
+  color: var(--blue) !important;
+}
+
+.main-logo {
+  background: url("/img/sofa.png");
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 35vh;
+}
+
+section {
+  padding: 7vh 0;
+}
+
+.bg-gray {
+  background-color: #f8f8f8;
+}
+
+.gray-link {
+  font-weight: 700;
+  color: var(--light);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.gray-link:hover {
+  transition: 0.5s;
+  color: var(--dark);
+}
+
+.home-describe {
+  margin-bottom: 5vh;
+}
+
+.form-check-input:checked {
+  background-color: var(--blue) !important;
+}
+
+main {
+  margin-top: 82px;
+}
+
+.zoom {
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.zoom img {
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.hover-zoom:hover img {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 576px) {
+  .main-logo {
+    min-height: 25vh;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  input[type="email"] {
+    min-width: 300px !important;
+  }
 }
