@@ -2,7 +2,7 @@ const getPosts: (start?: string, end?: string) => Promise<any> = async (
   start,
   end
 ) => {
-  const user = await fetch(`http://localhost:3000/api/posts`);
+  const user = await fetch(`${process.env.HOST}/api/posts`);
   const data = await user.json();
 
   if (!start) return data;
