@@ -22,17 +22,23 @@ const Post: NextPage = ({ post }: any) => {
             <span className="ms-3">&#9679;</span>
           </small>
           <span>
-            <FontAwesomeIcon
-              className="share-icon"
-              size="lg"
-              icon={faFacebook}
-            />
-            <FontAwesomeIcon
-              className="share-icon mx-3"
-              size="lg"
-              icon={faTwitter}
-            />
-            <FontAwesomeIcon className="share-icon" size="lg" icon={faLink} />
+            <a href="">
+              <FontAwesomeIcon
+                className="share-icon"
+                size="lg"
+                icon={faFacebook}
+              />
+            </a>
+            <a href="">
+              <FontAwesomeIcon
+                className="share-icon mx-3"
+                size="lg"
+                icon={faTwitter}
+              />
+            </a>
+            <a href="">
+              <FontAwesomeIcon className="share-icon" size="lg" icon={faLink} />
+            </a>
           </span>
         </Row>
         <Row className="mb-5">

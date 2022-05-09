@@ -12,9 +12,13 @@
   color: #8b8b8b;
 }
 
-.footer ul a,
-.footer ul svg {
+.footer ul a {
   color: #8b8b8b;
+}
+
+.footer a:hover svg {
+  color: #1786d4 !important;
+  transition: 0.3s linear;
 }
 
 .footer ul svg {
@@ -23,4 +27,15 @@
 
 .footer li {
   margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer div {
+    margin-bottom: 3.5rem;
+  }
 }

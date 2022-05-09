@@ -32,12 +32,13 @@ const Footer = () => (
     </div>
     <div>
       <h3 className="mb-3">Studenckie Koło Naukowe Psychoterapii DIALOG</h3>
-      <div>
+      <span>
         <small>Wydział Psychologii Uniwersytetu Warszawskiego</small>
-      </div>
-      <div>
+      </span>
+      <br />
+      <span>
         <small>ul. Stawki 5/7, 00-183 Warszawa</small>
-      </div>
+      </span>
     </div>
     <img src="/img/logo_stopka.png" alt="" />
   </footer>

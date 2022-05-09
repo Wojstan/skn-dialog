@@ -12,8 +12,8 @@ import getPosts from "../utils/getPosts";
 const Home: NextPage = ({ posts }: any) => {
   return (
     <Layout>
-      <div className="main-logo">
-        <img src="/img/main-logo.png" alt="" />
+      <div className="main-logo ">
+        <img className="img-fluid" src="/img/main-logo.png" alt="" />
       </div>
 
       <Section>

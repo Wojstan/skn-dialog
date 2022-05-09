@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Col, Row } from "react-bootstrap";
 import HPost from "./HPost/HPost";
 
@@ -40,6 +41,11 @@ const HomePosts = ({ posts }: Props) => (
         )}
       </Col>
     </Row>
+    <Link href="/posts">
+      <a className="text-center d-block">
+        <strong>Zobacz wszystkie</strong>
+      </a>
+    </Link>
   </>
 );
 

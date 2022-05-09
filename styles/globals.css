@@ -5,6 +5,7 @@
   --blue: #16649b;
   --light: #8b8b8b;
   --dark: #323232;
+  --hover: #1786d4;
 }
 
 * {
@@ -73,6 +74,11 @@ button {
   min-width: 130px;
 }
 
+button:hover {
+  background-color: var(--hover) !important;
+  transition: all 0.2s linear;
+}
+
 strong {
   font-weight: 700;
   color: var(--blue);
@@ -81,6 +87,12 @@ strong {
 
 a {
   text-decoration: none !important;
+}
+
+a:hover,
+a svg:hover {
+  color: var(--hover) !important;
+  transition: all 0.2s linear;
 }
 
 a svg {
@@ -123,15 +135,47 @@ section {
   color: var(--dark);
 }
 
-.share-icon {
-  color: var(--blue);
-  cursor: pointer;
-}
-
 .home-describe {
   margin-bottom: 5vh;
 }
 
 .form-check-input:checked {
   background-color: var(--blue) !important;
+}
+
+main {
+  margin-top: 82px;
+}
+
+.zoom {
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.zoom img {
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.hover-zoom:hover img {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 576px) {
+  .main-logo {
+    min-height: 25vh;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  input[type="email"] {
+    min-width: 300px !important;
+  }
 }
