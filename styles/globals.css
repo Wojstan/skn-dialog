@@ -112,7 +112,11 @@ a svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 35vh;
+  min-height: 38vh;
+}
+
+.main-logo img {
+  padding-top: 4rem;
 }
 
 section {
@@ -143,10 +147,6 @@ section {
   background-color: var(--blue) !important;
 }
 
-main {
-  margin-top: 82px;
-}
-
 .zoom {
   position: relative;
   overflow: hidden;
@@ -166,11 +166,16 @@ main {
   transform: scale(1.1);
 }
 
-@media screen and (max-width: 576px) {
-  .main-logo {
-    min-height: 25vh;
-  }
+.team-about {
+  background: url("/img/team.webp");
+  background-size: cover;
+  background-position: center;
+  min-height: 40vh;
+  filter: brightness(80%);
+  position: relative;
+}
 
+@media screen and (max-width: 576px) {
   p {
     font-size: 1rem;
   }
