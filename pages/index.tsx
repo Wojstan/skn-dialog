@@ -27,14 +27,29 @@ const Home: NextPage = ({ posts }: any) => {
       </Section>
 
       <Section gray>
+        <h1>NASZE PROJEKTY</h1>
+        <p className="text-center home-describe">
+          Krótki opis odnośnie projektów
+        </p>
+
         <Projects />
       </Section>
 
       <Section>
+        <h1>NAJNOWSZE PUBLIKACJE</h1>
+        <p className="text-center home-describe">
+          Krótki opis odnośnie publikacji
+        </p>
+
         <HomePosts posts={posts} />
       </Section>
 
       <Section gray>
+        <h1>NEWSLETTER</h1>
+        <p className="text-center home-describe">
+          Zapisz się do naszego newslettera!
+        </p>
+
         <Newsletter />
       </Section>
 

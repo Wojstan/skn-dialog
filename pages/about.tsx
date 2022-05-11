@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Layout from "@global/Layout/Layout";
 import Section from "@global/Section/Section";
 import Team from "@About/Team/Team";
+import Projects from "@Home/Projects/Projects";
 
 const About: NextPage = () => {
   return (
@@ -34,6 +35,9 @@ const About: NextPage = () => {
 
       <Section>
         <h1>Działalność</h1>
+        <p className="home-describe text-center">Krótki opis</p>
+
+        <Projects />
       </Section>
     </Layout>
   );

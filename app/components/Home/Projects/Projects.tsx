@@ -30,39 +30,34 @@ const projectData = [
 ];
 
 const Projects = () => (
-  <>
-    <h1>NASZE PROJEKTY</h1>
-    <p className="text-center home-describe">Krótki opis odnośnie projektów</p>
-
-    <Row className="d-flex justify-content-center align-items-center">
-      <Col md="6" style={{ maxWidth: "700px" }}>
-        {projectData.map(
-          (post, i) =>
-            i % 2 !== 0 && (
-              <Project
-                key={i}
-                title={post.title}
-                about={post.about}
-                thumbnail={post.thumbnail}
-              />
-            )
-        )}
-      </Col>
-      <Col md="6" style={{ maxWidth: "700px" }}>
-        {projectData.map(
-          (post, i) =>
-            i % 2 === 0 && (
-              <Project
-                key={i}
-                title={post.title}
-                about={post.about}
-                thumbnail={post.thumbnail}
-              />
-            )
-        )}
-      </Col>
-    </Row>
-  </>
+  <Row className="d-flex justify-content-center align-items-center">
+    <Col md="6" style={{ maxWidth: "700px" }}>
+      {projectData.map(
+        (post, i) =>
+          i % 2 !== 0 && (
+            <Project
+              key={i}
+              title={post.title}
+              about={post.about}
+              thumbnail={post.thumbnail}
+            />
+          )
+      )}
+    </Col>
+    <Col md="6" style={{ maxWidth: "700px" }}>
+      {projectData.map(
+        (post, i) =>
+          i % 2 === 0 && (
+            <Project
+              key={i}
+              title={post.title}
+              about={post.about}
+              thumbnail={post.thumbnail}
+            />
+          )
+      )}
+    </Col>
+  </Row>
 );
 
 export default Projects;
