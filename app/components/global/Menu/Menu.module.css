@@ -4,18 +4,39 @@
   align-items: center;
   background: linear-gradient(
     360deg,
-    rgba(221, 221, 221, 0.7) -7.78%,
-    rgba(255, 255, 255, 0.7) 100%
+    rgba(221, 221, 221, 0.65) -7.78%,
+    rgba(255, 255, 255, 0.65) 100%
   );
   padding: 1.2rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  transition: transform 0.4s;
-  z-index: 5;
+  transition: all 0.4s linear;
+  z-index: 1;
   backdrop-filter: blur(8px);
   min-height: 82px;
+}
+
+.menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    360deg,
+    rgba(221, 221, 221, 0.8) -7.78%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+  z-index: -1;
+  transition: all 0.4s linear;
+  opacity: 0;
+}
+
+.menu:hover::before {
+  opacity: 0.8;
 }
 
 .menu ul {

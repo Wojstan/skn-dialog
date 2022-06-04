@@ -8,9 +8,6 @@ type Props = {
 
 const HomePosts = ({ posts }: Props) => (
   <>
-    <h1>NAJNOWSZE PUBLIKACJE</h1>
-    <p className="text-center home-describe">Krótki opis odnośnie publikacji</p>
-
     <Row className="d-flex justify-content-center">
       <Col md="6" style={{ maxWidth: "550px" }}>
         {posts.map(

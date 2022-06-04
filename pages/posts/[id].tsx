@@ -11,7 +11,7 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 const Post: NextPage = ({ post }: any) => {
   return (
     <Layout>
-      <Container className="p-5">
+      <Container className="p-5" style={{ marginTop: "80px" }}>
         <Row>
           <h1 className="text-start mt-4">{post.title}</h1>
         </Row>
