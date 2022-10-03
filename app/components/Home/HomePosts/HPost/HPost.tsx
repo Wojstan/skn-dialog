@@ -1,14 +1,15 @@
 import Link from "next/link";
+import { FC } from "react";
 import styles from "./HPost.module.css";
 
-type Props = {
+type HPostProps = {
   id: number;
   thumbnail: string;
   date: string;
   title: string;
 };
 
-const HPost = ({ id, thumbnail, date, title }: Props) => (
+const HPost: FC<HPostProps> = ({ id, thumbnail, date, title }) => (
   <div className={styles.post}>
     <div className="hover-zoom">
       <div className="zoom">

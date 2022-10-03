@@ -7,14 +7,15 @@ import Projects from "@Home/Projects/Projects";
 const About: NextPage = () => {
   return (
     <Layout>
-      <div className="team-about" />
 
       <Section>
-        <h1 className="mb-5">Kim jesteśmy?</h1>
+        <h1 >
+          Kim jesteśmy?
+        </h1>
 
-        <h2 className="my-4" style={{ textTransform: "none" }}>
-          Opiekun Koła - dr hab. Anna Cierpka
-        </h2>
+        <h3 className="my-4" style={{ textTransform: "none" }}>
+          Opiekunka Koła - dr hab. Anna Cierpka
+        </h3>
 
         <p>
           Jestem psychologiem, adiunktem Wydziału Psychologii Uniwersytetu
@@ -34,8 +35,11 @@ const About: NextPage = () => {
       </Section>
 
       <Section>
-        <h1>Działalność</h1>
-        <p className="home-describe text-center">Krótki opis</p>
+        <h1>Projekty</h1>
+        <p className="home-describe text-center">
+          W &ldquo;Dialogu&ldquo; działamy wszechstronnie, na wielu polach -
+          każdy znajdzie coś dla siebie.
+        </p>
 
         <Projects />
       </Section>

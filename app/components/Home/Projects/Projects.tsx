@@ -31,32 +31,15 @@ const projectData = [
 
 const Projects = () => (
   <Row className="d-flex justify-content-center align-items-center">
-    <Col md="6" style={{ maxWidth: "700px" }}>
-      {projectData.map(
-        (post, i) =>
-          i % 2 !== 0 && (
-            <Project
-              key={i}
-              title={post.title}
-              about={post.about}
-              thumbnail={post.thumbnail}
-            />
-          )
-      )}
-    </Col>
-    <Col md="6" style={{ maxWidth: "700px" }}>
-      {projectData.map(
-        (post, i) =>
-          i % 2 === 0 && (
-            <Project
-              key={i}
-              title={post.title}
-              about={post.about}
-              thumbnail={post.thumbnail}
-            />
-          )
-      )}
-    </Col>
+    {projectData.map((post, i) => (
+      <Col key={i} md="6" style={{ maxWidth: "700px" }}>
+        <Project
+          title={post.title}
+          about={post.about}
+          thumbnail={post.thumbnail}
+        />
+      </Col>
+    ))}
   </Row>
 );
 

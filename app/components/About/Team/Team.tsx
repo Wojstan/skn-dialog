@@ -3,28 +3,38 @@ import styles from "./Team.module.css";
 
 const teamData = [
   {
-    name: "Aleksandra Warkocka",
-    about: "Przewodnicząca w I semestrze/ Wiceprzewodnicząca w II semestrze",
+    name: "Marcin Bagiński",
+    about: "Prezes koła",
     avatar: "1.png",
   },
   {
-    name: "Julia Kluska",
-    about: "Wiceprzewodnicząca w I semestrze/Przewodnicząca w II semestrze:",
+    name: "Misia Zienkiewicz",
+    about: "Wiceprezeska koła i specjalistka do spraw HR",
     avatar: "2.png",
   },
   {
-    name: "Marta Adamiuk",
-    about: "Specjalistka ds. merytorycznych",
+    name: "Karolina Marcinkowska",
+    about: "Specjalistka ds. PR",
+    avatar: "3.png",
+  },
+  {
+    name: "Róża Iwańska",
+    about: "Specjalistka ds. finansów",
+    avatar: "3.png",
+  },
+  {
+    name: "Oliwia Wieczorek",
+    about: "Specjalistka ds. eventów",
     avatar: "3.png",
   },
 ];
 
 const Team = () => (
   <div>
-    <h2 className="mb-3">Zarząd:</h2>
+    <h3 className="mb-3">Zarząd:</h3>
 
     <div>
-      <small>Rok akademicki 2021/22</small>
+      <small>Rok akademicki 2022/23</small>
     </div>
 
     <ul className={styles.team}>

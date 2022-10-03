@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
 
 :root {
   --white: #fff;
-  --blue: #16649b;
+  --blue: #2974bb;
   --light: #8b8b8b;
-  --dark: #323232;
+  --dark: #5c5c5c;
   --hover: #1786d4;
 }
 
@@ -16,7 +16,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Arsenal", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 h1 {
@@ -27,7 +27,7 @@ h1 {
 h1,
 h2 {
   color: var(--blue);
-  text-transform: uppercase;
+  font-weight: 600 !important;
 }
 
 h3 {
@@ -38,7 +38,7 @@ p {
   font-size: 1.1rem;
   letter-spacing: 0.5px;
   text-align: justify;
-  line-height: 30px;
+  line-height: 40px;
   color: var(--dark);
 }
 
@@ -87,6 +87,7 @@ strong {
 
 a {
   text-decoration: none !important;
+  color: var(--blue) !important;
 }
 
 a:hover,
@@ -100,27 +101,18 @@ a svg {
   font-size: 1.5rem;
 }
 
-.active a {
-  font-weight: 700;
-  color: var(--blue) !important;
-}
-
 .main-logo {
-  background: url("/img/sofa.png");
+  background-image: url("../public/img/main.png");
   background-size: cover;
   background-position: bottom;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 38vh;
-}
-
-.main-logo img {
-  padding-top: 4rem;
+  min-height: 75vh;
 }
 
 section {
-  padding: 7vh 0;
+  padding: 9vh 0;
 }
 
 .bg-gray {
@@ -173,6 +165,10 @@ section {
   min-height: 40vh;
   filter: brightness(80%);
   position: relative;
+}
+
+.partners img {
+  filter: grayscale(1);
 }
 
 @media screen and (max-width: 576px) {
