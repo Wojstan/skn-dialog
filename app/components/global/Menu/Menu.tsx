@@ -13,10 +13,6 @@ const menuData = [
     link: "/",
   },
   {
-    label: "Kim jesteśmy?",
-    link: "/about",
-  },
-  {
     label: <FontAwesomeIcon icon={faFacebookF} />,
     exLink: "https://www.facebook.com/SKNdialog/",
   },
@@ -43,11 +39,7 @@ const Menu = () => {
             active={router.pathname === row.link}
           />
         ))}
-        <li>
-          <Link href="/join">
-            <button className={styles.join}>Dołącz do nas!</button>
-          </Link>
-        </li>
+        
       </ul>
     </nav>
   );
