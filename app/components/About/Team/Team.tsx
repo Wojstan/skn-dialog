@@ -27,6 +27,11 @@ const teamData = [
     about: "Specjalistka ds. eventów",
     avatar: "3.png",
   },
+  {
+    name: "Magdalena Michałowska",
+    about: "Specjalistka ds. eventów",
+    avatar: "3.png",
+  },
 ];
 
 const Team = () => (
