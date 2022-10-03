@@ -20,7 +20,7 @@ const footerData = [
   },
 ];
 
-const Footer = () => (
+const Footer: React.FC = () => (
   <footer className={styles.footer}>
     <div>
       <h3 className="mb-3">Kontakt:</h3>
@@ -30,16 +30,7 @@ const Footer = () => (
         ))}
       </ul>
     </div>
-    <div>
-      <h3 className="mb-3">Studenckie Koło Naukowe Psychoterapii DIALOG</h3>
-      <span>
-        <small>Wydział Psychologii Uniwersytetu Warszawskiego</small>
-      </span>
-      <br />
-      <span>
-        <small>ul. Stawki 5/7, 00-183 Warszawa</small>
-      </span>
-    </div>
+   
     <img src="/img/logo_stopka.png" alt="" />
   </footer>
 );

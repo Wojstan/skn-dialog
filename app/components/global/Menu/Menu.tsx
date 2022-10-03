@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import styles from "./Menu.module.css";
 import MenuLink from "./MenuLink/MenuLink";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const menuData = [
   {
@@ -16,11 +17,7 @@ const menuData = [
     link: "/about",
   },
   {
-    label: "Publikacje",
-    link: "/posts",
-  },
-  {
-    label: <FontAwesomeIcon icon={faFacebook} />,
+    label: <FontAwesomeIcon icon={faFacebookF} />,
     exLink: "https://www.facebook.com/SKNdialog/",
   },
   {
@@ -30,39 +27,11 @@ const menuData = [
 ];
 
 const Menu = () => {
-  const menuRef = useRef(null);
-  const [isHidden, setIsHidden] = useState(false);
-  const [scroll, setScroll] = useState(0);
   const router = useRouter();
 
-  const navClasses = `${styles.menu} ${isHidden ? styles.hide : styles.show}`;
-
-  const onScroll = useCallback(
-    (e: any) => {
-      const window = e.currentTarget;
-
-      if (window.scrollY === 0) {
-        setIsHidden(false);
-        return;
-      }
-
-      setIsHidden(!(scroll > window.scrollY));
-      setScroll(window.scrollY);
-    },
-    [scroll]
-  );
-
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, [onScroll]);
-
   return (
-    <nav ref={menuRef} className={navClasses}>
-      <img src="/img/logo_sm.png" alt="" />
+    <nav className={styles.menu}>
+      <img src="/img/blue-logo.png" height={140} alt="" />
 
       <ul>
         {menuData.map((row, i) => (
@@ -74,6 +43,11 @@ const Menu = () => {
             active={router.pathname === row.link}
           />
         ))}
+        <li>
+          <Link href="/join">
+            <button className={styles.join}>Dołącz do nas!</button>
+          </Link>
+        </li>
       </ul>
     </nav>
   );

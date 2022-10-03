@@ -4,6 +4,8 @@ const getPageTitle = (route: string) => {
       return "Strona główna";
     case "/about":
       return "Kim jesteśmy?";
+    case "/join":
+      return "Dołącz do nas!";
     case "/posts":
       return "Publikacje";
   }
