@@ -14,7 +14,7 @@ const menuData = [
   },
   {
     label: "Kim jesteśmy?",
-    link: "/about",
+    link: "/kim-jestesmy",
   },
   {
     label: <FontAwesomeIcon icon={faFacebookF} />,
@@ -44,7 +44,7 @@ const Menu = () => {
           />
         ))}
         <li>
-          <Link href="/join">
+          <Link href="/dolacz-do-nas">
             <button className={styles.join}>Dołącz do nas!</button>
           </Link>
         </li>

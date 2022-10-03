@@ -1,0 +1,43 @@
+{
+  "header": {
+    "title": "SKN DIALOG",
+    "text": "Serdecznie zapraszamy na pierwsze wydarzenie organizowane w ramach tegorocznego cyklu spotkań “W Związku z Rodziną”, które odbędzie się już w ten wtorek o godzinie 16:00. Gościnią koła będzie prof. Iwona Grzegorzewska, która wygłosi wykład pt. „Parentyfikacja i jej znaczenie w życiu dziecka”."
+  },
+  "projects": {
+    "title": "Nasze projekty",
+    "text": "",
+    "data": [
+      {
+        "title": "Konferencja Zaburzeń Osobowości",
+        "text": "Nasza flagowa konferencja w tematyce zaburzeń osobowości, zrzeszająca osoby eksperckie z tej dziedziny jako prelegentów.",
+        "img": "/img/projects/OKZO.webp"
+      },
+      {
+        "title": "Ogólnopolska Konferencja Psychoterapii Dzieci i Młodzieży",
+        "text": "Cykl ogólnopolskich konferencji dotyczących psychoterapii dzieci i młodzieży.",
+        "img": "/img/projects/OKPDIZ.png"
+      },
+      {
+        "title": "Mind the Mind",
+        "text": "Mind the Mind działa na rzecz destygmatyzacji zaburzeń psychicznych.",
+        "img": "/img/projects/MTM.webp"
+      },
+      {
+        "title": "Konferencja 3PM",
+        "text": "Konferencja dotycząca pomocy psychologicznej i  psychoterapii mniejszości.",
+        "img": "/img/projects/K3PM.webp"
+      },
+      {
+        "title": "Dyskusyjny Klub Filmowy PsychomUWi",
+        "text": "Dyskusyjny Klub Filmowy “Psycho mUWi” to projekt realizowany w ramach Studenckiego Koło Naukowego Psychoterapii 'Dialog', działającego na Wydziale Psychologii Uniwersytetu Warszawskiego.",
+        "img": "/img/projects/PMUWI.webp"
+      },
+      {
+        "title": "Działaj dla PSYCHE",
+        "text": "Celem inicjatywy jest aktywne działanie na rzecz poprawy stanu ochrony zdrowia.",
+        "img": "/img/projects/DDP.png"
+      }
+    ]
+  },
+  "partners": ["gwp.png", "cpp.png", "kampus.png", "pkn.png", "wuj.png"]
+}

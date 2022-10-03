@@ -1,0 +1,9 @@
+.project {
+  display: inline-block;
+  width: 48%;
+  margin: 1%;
+}
+
+.project img {
+  margin: 3rem;
+}

@@ -1,33 +1,53 @@
+import Layout from "@components/Layout/Layout";
+import Project from "@components/Project/Project";
+import SectionBlock from "@components/SectionBlock/SectionBlock";
+import { HomeInterface } from "interfaces/HomeInterface";
 import type { NextPage } from "next";
-import Layout from "@global/Layout/Layout";
 
-import Section from "@global/Section/Section";
-import Partners from "@Home/Partners/Partners";
 import { Container } from "react-bootstrap";
+import { getHomeData } from "services/api-services";
 
-const Home: NextPage = ({ posts }: any) => {
+export function getStaticProps() {
+  const homeData = getHomeData();
+
+  return {
+    props: {
+      data: homeData,
+    },
+  };
+}
+
+const Home: NextPage<HomeInterface> = ({ data }) => {
+  const { partners, projects, header } = data;
+
   return (
     <Layout>
-      <div style={{ background: "#C8E0FF" }}>
+      <header className="mb-section">
+        <div className="text-center mb-5" style={{ background: "#C8E0FF" }}>
+          <Container>
+            <img src="/img/main.png" alt="SKN Dialog" />
+          </Container>
+        </div>
         <Container>
-          <img className="img-fluid" src="/img/main.png" alt="" />
+          <article>
+            <h1>{header.title}</h1>
+            <p className="text-center">{header.text}</p>
+          </article>
         </Container>
-      </div>
+      </header>
 
-      <Section>
-        <h1>Kim jesteśmy?</h1>
-        <p className="text-center">
-          Serdecznie zapraszamy na pierwsze wydarzenie organizowane w ramach
-          tegorocznego cyklu spotkań “W Związku z Rodziną”, które odbędzie się
-          już w ten wtorek o godzinie 16:00. Gościnią koła będzie prof. Iwona
-          Grzegorzewska, która wygłosi wykład pt. „Parentyfikacja i jej
-          znaczenie w życiu dziecka”.
-        </p>
-      </Section>
-
-      <Section>
-        <Partners />
-      </Section>
+      <Container>
+        <aside className="d-flex flex-column justify-content-around align-items-center my-lg-5 flex-lg-row">
+          {partners.map((partner, i) => (
+            <img
+              className="mb-lg-0 mb-5"
+              key={i}
+              src={`/img/partners/${partner}`}
+              alt=""
+            />
+          ))}
+        </aside>
+      </Container>
     </Layout>
   );
 };
