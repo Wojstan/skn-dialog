@@ -1,5 +1,3 @@
-import Footer from "components/navigation/Footer/Footer";
-import Menu from "components/navigation/Navbar/Menu";
 import { FC, ReactNode } from "react";
 import { Container } from "react-bootstrap";
 
@@ -15,7 +13,7 @@ const SectionBlock: FC<LayoutProps> = ({ children, id, title, text }) => (
     <Container>
       <article>
         <h2>{title}</h2>
-        <p>{text}</p>
+        <h5 className="mb-5">{text}</h5>
         {children}
       </article>
     </Container>

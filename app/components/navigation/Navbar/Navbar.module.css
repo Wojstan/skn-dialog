@@ -4,10 +4,12 @@
   justify-content: space-between;
   padding: 2rem 1rem;
   z-index: 1;
-  min-height: 82px;
-  position: absolute;
-  top: 0;
   width: 100%;
+  background-color: #c8e0ff;
+}
+
+.menu img {
+  max-height: 9rem;
 }
 
 .menu ul {
@@ -19,23 +21,23 @@
 
 .menu li {
   margin: 0.5rem 1rem;
-  font-size: 1.2rem;
-}
-
-.show {
-  transform: none;
 }
 
 .join {
-  background-color: black;
+  background-color: black !important;
+  border-radius: 0.5rem !important;
   color: #9bc2f5;
   padding: 1rem 1.5rem;
-  font-size: 1rem;
   font-family: "Poppins", sans-serif !important;
+  min-width: auto !important;
+  margin: 0rem 0.5rem;
 }
 
-@media screen and (max-width: 766px) {
-  .menu ul {
-    display: none;
+@media screen and (max-width: 1200px) {
+  .menu {
+    flex-direction: column;
+  }
+  .join {
+    margin-top: 2rem;
   }
 }

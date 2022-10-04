@@ -1,10 +1,11 @@
+import HomeHeader from "@components/home/HomeHeader/HomeHeader";
 import Layout from "@components/Layout/Layout";
 import Project from "@components/Project/Project";
 import SectionBlock from "@components/SectionBlock/SectionBlock";
 import { HomeInterface } from "interfaces/HomeInterface";
 import type { NextPage } from "next";
 
-import { Container } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { getHomeData } from "services/api-services";
 
 export function getStaticProps() {
@@ -18,36 +19,34 @@ export function getStaticProps() {
 }
 
 const Home: NextPage<HomeInterface> = ({ data }) => {
-  const { partners, projects, header } = data;
+  const { projects, header } = data;
 
   return (
     <Layout>
-      <header className="mb-section">
-        <div className="text-center mb-5" style={{ background: "#C8E0FF" }}>
-          <Container>
-            <img src="/img/main.png" alt="SKN Dialog" />
-          </Container>
-        </div>
-        <Container>
-          <article>
-            <h1>{header.title}</h1>
-            <p className="text-center">{header.text}</p>
-          </article>
-        </Container>
-      </header>
+      <HomeHeader title={header.title} text={header.text} info={header.info} />
 
-      <Container>
-        <aside className="d-flex flex-column justify-content-around align-items-center my-lg-5 flex-lg-row">
-          {partners.map((partner, i) => (
-            <img
-              className="mb-lg-0 mb-5"
+      <aside>
+        <img
+          className="d-none d-md-block w-100"
+          src="/img/waves.svg"
+          style={{ rotate: "-180deg", marginTop: "-2px" }}
+          alt="waves"
+        />
+      </aside>
+
+      <SectionBlock id="projekty" title={projects.title} text={projects.text}>
+        <Row>
+          {projects.info.map((project, i) => (
+            <Project
+              pd
               key={i}
-              src={`/img/partners/${partner}`}
-              alt=""
+              title={project.title}
+              img={project.img}
+              text={project.text}
             />
           ))}
-        </aside>
-      </Container>
+        </Row>
+      </SectionBlock>
     </Layout>
   );
 };

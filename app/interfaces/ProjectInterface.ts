@@ -8,10 +8,10 @@ export type HomeBlocks = {
   }[];
 };
 
-export interface HomeInterface {
+export interface ProjectInterface {
   data: {
     header: HomeBlocks;
-    projects: HomeBlocks;
-    partners: string[];
+    guard: HomeBlocks;
+    administration: HomeBlocks;
   };
 }

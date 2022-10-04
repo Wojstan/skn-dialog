@@ -1,24 +1,32 @@
 import { FC } from "react";
+import { Col } from "react-bootstrap";
 
 import styles from "./Project.module.css";
 
 type ProjectProps = {
   img: string;
   title: string;
-  about: string;
+  text?: string;
+  pd?: boolean;
 };
 
-const Project: FC<ProjectProps> = ({ img, title, about }) => {
+const Project: FC<ProjectProps> = ({ img, title, text, pd }) => {
   return (
-    <li className={styles.project}>
-      <div className="d-flex justify-content-between align-items-center">
-        <div>
-          <h3>{title}</h3>
-          <h5>{about}</h5>
+    <Col className="text-center p-5" md="6" xl="4">
+      <div className={styles.flex}>
+        <div
+          style={{ padding: pd ? "1.3rem" : undefined }}
+          className={styles.avatar}
+        >
+          <img src={img} alt={title} />
         </div>
-        <img height={160} src={img} alt={title} />
+
+        <h4 className="mb-3">{title}</h4>
+        <p>
+          <small>{text}</small>
+        </p>
       </div>
-    </li>
+    </Col>
   );
 };
 

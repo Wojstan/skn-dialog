@@ -1,37 +1,51 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import FooterLink from "./FooterLink/FooterLink";
+import { Col, Container, Row } from "react-bootstrap";
 
 import styles from "./Footer.module.css";
 
-const footerData = [
-  {
-    link: "https://www.facebook.com/SKNdialog/",
-    icon: <FontAwesomeIcon icon={faFacebook} />,
-  },
-  {
-    link: "skndialog@psych.uw.edu.pl",
-    icon: <FontAwesomeIcon icon={faEnvelope} />,
-  },
-  {
-    link: "https://www.instagram.com/dialog_skn/",
-    icon: <FontAwesomeIcon icon={faInstagram} />,
-  },
-];
-
 const Footer: React.FC = () => (
-  <footer className={styles.footer}>
-    <div>
-      <h3 className="mb-3">Kontakt:</h3>
-      <ul>
-        {footerData.map((row, i) => (
-          <FooterLink key={i} link={row.link} icon={row.icon} />
-        ))}
-      </ul>
-    </div>
-   
-    <img src="/img/logo_stopka.png" alt="" />
+  <footer className="bg-gray text-center py-4">
+    <Container>
+      <Row className="p-2 mb-3">
+        <Col md="6">
+          <h4 className="mb-3">Kontakt:</h4>
+          <ul className={styles.list}>
+            <li>
+              <FontAwesomeIcon icon={faEnvelope} />
+              skndialog@psych.uw.edu.pl
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faFacebookF} />
+              <a
+                href="https://www.facebook.com/SKNdialog/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Odwiedź nasz facebook!
+              </a>
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faInstagram} />
+              <a
+                href="https://www.instagram.com/SKNdialog/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Odwiedź nasz instagram!
+              </a>
+            </li>
+          </ul>
+        </Col>
+        <Col className="align-self-center" md="6">
+          <img src="/img/logo_stopka.png" alt="" />
+        </Col>
+      </Row>
+      <p>
+        <small>© 2022 Wszelkie prawa zastrzeżone</small>
+      </p>
+    </Container>
   </footer>
 );
 

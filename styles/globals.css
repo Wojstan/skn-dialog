@@ -6,6 +6,7 @@
   --light: #8b8b8b;
   --dark: #5c5c5c;
   --hover: #1786d4;
+  --pink: #fdae9c;
 }
 
 * {
@@ -13,84 +14,64 @@
 }
 
 html,
-body {
+body,
+button {
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif !important;
 }
 
-h1 {
-  margin-bottom: 1.5vh !important;
+h1,
+h2,
+h3 {
+  font-weight: 600 !important;
+  margin-bottom: 2rem !important;
 }
 
 h1,
 h2 {
   color: var(--blue);
-  font-weight: 600 !important;
   text-align: center;
 }
 
-h3 {
-  color: var(--dark);
+h1 {
+  letter-spacing: 0.35rem;
 }
 
-p,
+h2 {
+  letter-spacing: 0.2rem;
+  font-size: 2.5rem !important;
+}
+
+h3 {
+  color: var(--pink);
+  letter-spacing: 0.2rem;
+}
+
+h4 {
+  font-size: 1.2rem !important;
+}
+
 h5 {
-  font-size: 1.1rem !important;
-  letter-spacing: 0.5px;
-  text-align: justify;
-  line-height: 40px !important;
-  color: var(--dark);
-  font-weight: 400 !important;
+  letter-spacing: 0.1rem;
+  text-align: center;
   color: var(--light);
+  font-weight: 300 !important;
+  line-height: 40px !important;
+}
+
+p {
+  color: var(--light);
+  letter-spacing: 0.1rem;
+  line-height: 30px !important;
+}
+
+.bg-gray {
+  background-color: #f8f8f8;
 }
 
 article {
-  margin-top: 6vh;
-  margin-bottom: 8vh;
-}
-
-small,
-.post-bibliography p {
-  color: var(--light);
-  font-size: 1rem !important;
-}
-
-input [type="email"],
-button {
-  outline: none;
-  font-family: "Arsenal", sans-serif !important;
-  padding: 0.7rem;
-  border: none;
-}
-
-input[type="email"] {
-  background-color: white;
-  color: var(--dark);
-  border-radius: 10px;
-  font-size: 1.1rem;
-  display: inline-block !important;
-  min-width: 380px !important;
-  padding: 0.8rem 1rem !important;
-  width: auto !important;
-}
-
-button {
-  border-radius: 5px !important;
-  color: var(--white);
-  background-color: var(--blue);
-  min-width: 130px;
-}
-
-button:hover {
-  background-color: var(--hover) !important;
-  transition: all 0.2s linear;
-}
-
-strong {
-  font-weight: 700;
-  color: var(--blue);
-  font-size: 1.2rem;
+  padding-top: 8vh;
 }
 
 a {
@@ -98,89 +79,36 @@ a {
   color: var(--blue) !important;
 }
 
-a:hover,
-a svg:hover {
-  color: var(--hover) !important;
-  transition: all 0.2s linear;
-}
-
 a svg {
   color: var(--blue);
   font-size: 1.5rem;
 }
 
-.main-logo {
-  background-image: url("../public/img/main.png");
-  background-size: cover;
-  background-position: bottom;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 75vh;
+ul {
+  list-style: none;
+  padding-left: 0 !important;
 }
 
-.bg-gray {
-  background-color: #f8f8f8;
+small {
+  font-weight: 300;
 }
 
-.gray-link {
-  font-weight: 700;
-  color: var(--light);
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.gray-link:hover {
-  transition: 0.5s;
-  color: var(--dark);
-}
-
-.home-describe {
-  margin-bottom: 5vh;
-}
-
-.form-check-input:checked {
+button {
   background-color: var(--blue) !important;
+  border-radius: 60px !important;
+  min-width: 12rem;
+  border: none;
 }
 
-.zoom {
-  position: relative;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
+.text-justify {
+  text-align: justify;
 }
 
-.zoom img {
-  transition: all 0.2s linear;
-  cursor: pointer;
-}
-
-.hover-zoom:hover img {
-  transform: scale(1.1);
-}
-
-.team-about {
-  background: url("/img/team.webp");
-  background-size: cover;
-  background-position: center;
-  min-height: 40vh;
-  filter: brightness(80%);
-  position: relative;
-}
-
-.partners img {
-  filter: grayscale(1);
-}
-
-@media screen and (max-width: 576px) {
-  p {
-    font-size: 1rem;
+@media screen and (max-width: 992px) {
+  .main-image {
+    width: 100%;
   }
-
-  input[type="email"] {
-    min-width: 300px !important;
+  h5 {
+    font-size: 1.1rem !important;
   }
 }

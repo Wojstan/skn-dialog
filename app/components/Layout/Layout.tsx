@@ -1,5 +1,5 @@
 import Footer from "components/navigation/Footer/Footer";
-import Menu from "components/navigation/Navbar/Menu";
+import Menu from "@components/navigation/Navbar/Navbar";
 import { FC, ReactNode } from "react";
 
 type LayoutProps = {
