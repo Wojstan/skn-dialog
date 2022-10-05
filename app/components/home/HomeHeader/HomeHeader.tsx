@@ -1,4 +1,5 @@
 import { HomeBlocks } from "interfaces/HomeInterface";
+import Link from "next/link";
 import { FC } from "react";
 import { Button, Container } from "react-bootstrap";
 import InfoBlock from "../InfoBlock/InfoBlock";
@@ -47,7 +48,9 @@ const HomeHeader: FC<HeaderProps> = ({ title, text, info }) => (
         </ul>
 
         <div className="text-center mt-5 pb-5">
-          <Button className="p-3">DOŁĄCZ DO NAS!</Button>
+          <Link href="/dolacz-do-nas">
+            <Button className="p-3">DOŁĄCZ DO NAS!</Button>
+          </Link>
         </div>
       </Container>
     </article>

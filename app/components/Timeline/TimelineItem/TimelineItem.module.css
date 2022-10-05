@@ -91,5 +91,6 @@
 
   .title {
     letter-spacing: 0.05rem;
+    font-size: 0.9rem !important;
   }
 }

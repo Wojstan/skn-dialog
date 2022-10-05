@@ -9,7 +9,7 @@ type InfoBlockProps = {
 
 const InfoBlock: FC<InfoBlockProps> = ({ title, text, img, even }) => (
   <li
-    className={`d-flex flex-column justify-content-center align-items-center m-4 flex-lg-row ${
+    className={`d-flex flex-column justify-content-center align-items-center m-2 mb-4 flex-lg-row ${
       even ? "flex-lg-row-reverse" : ""
     }`}
   >
