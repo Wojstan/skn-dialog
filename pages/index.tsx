@@ -35,7 +35,7 @@ const Home: NextPage<HomeInterface> = ({ data }) => {
       </aside>
 
       <SectionBlock id="projekty" title={projects.title} text={projects.text}>
-        <Row>
+        <Row className="pb-5">
           {projects.info.map((project, i) => (
             <Project
               pd

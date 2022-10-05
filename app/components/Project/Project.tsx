@@ -12,13 +12,13 @@ type ProjectProps = {
 
 const Project: FC<ProjectProps> = ({ img, title, text, pd }) => {
   return (
-    <Col className="text-center p-5" md="6" xl="4">
+    <Col className="text-center p-4" md="6" xl="4">
       <div className={styles.flex}>
         <div
           style={{ padding: pd ? "1.3rem" : undefined }}
           className={styles.avatar}
         >
-          <img src={img} alt={title} />
+          <img className="img-fluid" src={img} alt={title} />
         </div>
 
         <h4 className="mb-3">{title}</h4>

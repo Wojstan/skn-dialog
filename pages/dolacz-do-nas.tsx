@@ -1,4 +1,5 @@
 import Layout from "@components/Layout/Layout";
+import Timeline from "@components/Timeline/Timeline";
 import type { NextPage } from "next";
 import { Container } from "react-bootstrap";
 
@@ -48,8 +49,25 @@ const Join: NextPage = () => {
 
       <section id="os-czasu">
         <Container>
-          <article>
-            <h3>Na osi czasu</h3>
+          <article className="pb-5">
+            <h3 className="text-center">Rekrutacja na osi czasu</h3>
+
+            <Timeline
+              data={[
+                {
+                  title: "REJESTRACJA",
+                  time: "17-23.10",
+                },
+                {
+                  title: "ROZMOWY KWALIFIKACYJNE",
+                  time: "24.10-4.11",
+                },
+                {
+                  title: "OGŁOSZENIE WYNIKÓW",
+                  time: "6.11",
+                },
+              ]}
+            />
           </article>
         </Container>
       </section>

@@ -55,12 +55,12 @@ const About: NextPage<ProjectInterface> = ({ data }) => {
 
       <section id="zarzad">
         <Container>
-          <article>
+          <article className="mb-5">
             <h3>{administration.title}</h3>
             <p>{administration.text}</p>
           </article>
 
-          <Row>
+          <Row className="pb-5">
             {administration.info.map((project, i) => (
               <Project
                 key={i}

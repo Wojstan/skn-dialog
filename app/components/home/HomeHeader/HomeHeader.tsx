@@ -46,7 +46,7 @@ const HomeHeader: FC<HeaderProps> = ({ title, text, info }) => (
           ))}
         </ul>
 
-        <div className="text-center mt-5 ">
+        <div className="text-center mt-5 pb-5">
           <Button className="p-3">DOŁĄCZ DO NAS!</Button>
         </div>
       </Container>
