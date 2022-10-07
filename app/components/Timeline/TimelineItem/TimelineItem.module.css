@@ -6,15 +6,15 @@
 
 .round {
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: white;
   border: 2px solid #8b8b8b;
   border-radius: 50%;
-  padding: 10px;
+  padding: 8px;
   z-index: 4;
   position: absolute;
-  left: -24px;
+  left: -18px;
   top: 20px;
 }
 
@@ -36,8 +36,8 @@
 
 .round div {
   background-color: #fdae9c;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
 }
 

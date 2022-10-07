@@ -1,11 +1,10 @@
-import HomeHeader from "@components/home/HomeHeader/HomeHeader";
+import HomeHeader from "@components/HomeHeader/HomeHeader";
 import Layout from "@components/Layout/Layout";
 import Project from "@components/Project/Project";
-import SectionBlock from "@components/SectionBlock/SectionBlock";
 import { HomeInterface } from "interfaces/HomeInterface";
 import type { NextPage } from "next";
 
-import { Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { getHomeData } from "services/api-services";
 
 export function getStaticProps() {
@@ -34,19 +33,26 @@ const Home: NextPage<HomeInterface> = ({ data }) => {
         />
       </aside>
 
-      <SectionBlock id="projekty" title={projects.title} text={projects.text}>
-        <Row className="pb-5">
-          {projects.info.map((project, i) => (
-            <Project
-              pd
-              key={i}
-              title={project.title}
-              img={project.img}
-              text={project.text}
-            />
-          ))}
-        </Row>
-      </SectionBlock>
+      <section>
+        <Container>
+          <article>
+            <h2>{projects.title}</h2>
+            <h5>{projects.text}</h5>
+          </article>
+          
+          <Row className="pb-5">
+            {projects.info.map((project, i) => (
+              <Project
+                pd
+                key={i}
+                title={project.title}
+                img={project.img}
+                text={project.text}
+              />
+            ))}
+          </Row>
+        </Container>
+      </section>
     </Layout>
   );
 };

@@ -6,9 +6,9 @@ import { Col, Container, Row } from "react-bootstrap";
 import styles from "./Footer.module.css";
 
 const Footer: React.FC = () => (
-  <footer className="bg-gray text-center py-4">
-    <Container>
-      <Row className="p-2 mb-3">
+  <footer className="bg-gray text-center pt-4">
+    <Container className="py-3">
+      <Row>
         <Col md="6">
           <h4 className="mb-3">Kontakt:</h4>
           <ul className={styles.list}>

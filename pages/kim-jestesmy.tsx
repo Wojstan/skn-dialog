@@ -1,6 +1,7 @@
 import Layout from "@components/Layout/Layout";
 import Project from "@components/Project/Project";
-import { ProjectInterface } from "interfaces/ProjectInterface";
+import Waves from "@components/Waves/Waves";
+import { AboutInterface } from "interfaces/AboutInterface";
 import type { NextPage } from "next";
 import { Container, Row } from "react-bootstrap";
 import { getAboutData } from "services/api-services";
@@ -15,19 +16,14 @@ export function getStaticProps() {
   };
 }
 
-const About: NextPage<ProjectInterface> = ({ data }) => {
+const About: NextPage<AboutInterface> = ({ data }) => {
   const { header, guard, administration } = data;
 
   return (
     <Layout>
       <header className="bg-gray">
-        <aside>
-          <img
-            className="d-none d-md-block w-100"
-            src="/img/waves_blue.svg"
-            alt="waves-blue"
-          />
-        </aside>
+        <Waves src="/img/waves_blue.svg" />
+
         <article className="pb-1">
           <h2>{header.title}</h2>
           <h5>{header.text}</h5>
@@ -38,20 +34,12 @@ const About: NextPage<ProjectInterface> = ({ data }) => {
         <Container>
           <article className="text-center">
             <h3>{guard.title}</h3>
-
             <p className="pb-5 mb-0">{guard.text}</p>
           </article>
         </Container>
       </section>
 
-      <aside>
-        <img
-          className="d-none d-md-block w-100"
-          src="/img/waves.svg"
-          style={{ rotate: "-180deg", marginTop: "-2px" }}
-          alt="waves"
-        />
-      </aside>
+      <Waves src="/img/waves.svg" rotate />
 
       <section id="zarzad">
         <Container>

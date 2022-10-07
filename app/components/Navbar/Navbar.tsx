@@ -19,7 +19,14 @@ const menuData = [
 const Menu = () => {
   return (
     <nav className={styles.menu}>
-      <img className="img-fluid" src="/img/blue-logo.png" alt="SKN DIALOG" />
+      <Link href="/">
+        <img
+          className="img-fluid"
+          src="/img/blue-logo.png"
+          alt="SKN DIALOG"
+          style={{ cursor: "pointer" }}
+        />
+      </Link>
 
       <div className="d-flex flex-column align-items-center flex-xl-row">
         <ul>

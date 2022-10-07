@@ -1,5 +1,4 @@
-import { FC, ReactNode } from "react";
-import styles from "./Timeline.module.css";
+import { FC } from "react";
 import TimelineItem from "./TimelineItem/TimelineItem";
 
 type TimelineProps = {
@@ -10,7 +9,7 @@ type TimelineProps = {
 };
 
 const Timeline: FC<TimelineProps> = ({ data }) => (
-  <div className={styles.timeline}>
+  <div style={{ maxWidth: "58rem", margin: "6rem auto" }}>
     {data.map((item, i) => (
       <TimelineItem key={i} title={item.title} date={item.time} i={i} />
     ))}

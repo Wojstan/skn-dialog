@@ -1,9 +1,24 @@
 import Layout from "@components/Layout/Layout";
 import Timeline from "@components/Timeline/Timeline";
+import Waves from "@components/Waves/Waves";
+import { JoinInterface } from "interfaces/JoinInterface";
 import type { NextPage } from "next";
 import { Container } from "react-bootstrap";
+import { getJoinData } from "services/api-services";
 
-const Join: NextPage = () => {
+export function getStaticProps() {
+  const joinData = getJoinData();
+
+  return {
+    props: {
+      data: joinData,
+    },
+  };
+}
+
+const Join: NextPage<JoinInterface> = ({ data }) => {
+  const { timeline, header } = data;
+
   return (
     <Layout>
       <header className="bg-gray">
@@ -16,11 +31,8 @@ const Join: NextPage = () => {
         </aside>
 
         <article>
-          <h2>Chcesz do nas dołączyć?</h2>
-          <h5>
-            Nie zwlekaj, już dziś zgłoś się do naszego koła przez formularz
-            rekrutacyjny, a my zaprosimy Cię na rozmowę rekrutacyjną.
-          </h5>
+          <h2>{header.title}</h2>
+          <h5>{header.text}</h5>
         </article>
 
         <h4 className="text-center mb-5">
@@ -38,36 +50,14 @@ const Join: NextPage = () => {
         </div>
       </header>
 
-      <aside>
-        <img
-          className="d-none d-md-block w-100"
-          src="/img/waves.svg"
-          style={{ rotate: "-180deg", marginTop: "-2px" }}
-          alt="waves"
-        />
-      </aside>
+      <Waves src="/img/waves.svg" rotate />
 
       <section id="os-czasu">
         <Container>
           <article className="pb-5">
-            <h3 className="text-center">Rekrutacja na osi czasu</h3>
+            <h3 className="text-center">{timeline.title}</h3>
 
-            <Timeline
-              data={[
-                {
-                  title: "REJESTRACJA",
-                  time: "17-23.10",
-                },
-                {
-                  title: "ROZMOWY KWALIFIKACYJNE",
-                  time: "24.10-4.11",
-                },
-                {
-                  title: "OGŁOSZENIE WYNIKÓW",
-                  time: "6.11",
-                },
-              ]}
-            />
+            <Timeline data={timeline.info} />
           </article>
         </Container>
       </section>
