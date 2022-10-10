@@ -2,12 +2,10 @@ const getPageTitle = (route: string) => {
   switch (route) {
     case "/":
       return "Strona główna";
-    case "/about":
+    case "/kim-jestesmy":
       return "Kim jesteśmy?";
-    case "/join":
+    case "/dolacz-do-nas":
       return "Dołącz do nas!";
-    case "/posts":
-      return "Publikacje";
   }
 
   return "";

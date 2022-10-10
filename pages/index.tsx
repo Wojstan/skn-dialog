@@ -1,31 +1,58 @@
+import HomeHeader from "@components/HomeHeader/HomeHeader";
+import Layout from "@components/Layout/Layout";
+import Project from "@components/Project/Project";
+import { HomeInterface } from "interfaces/HomeInterface";
 import type { NextPage } from "next";
-import Layout from "@global/Layout/Layout";
 
-import Section from "@global/Section/Section";
-import Partners from "@Home/Partners/Partners";
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
+import { getHomeData } from "services/api-services";
 
-const Home: NextPage = ({ posts }: any) => {
+export function getStaticProps() {
+  const homeData = getHomeData();
+
+  return {
+    props: {
+      data: homeData,
+    },
+  };
+}
+
+const Home: NextPage<HomeInterface> = ({ data }) => {
+  const { projects, header } = data;
+
   return (
     <Layout>
-      <div style={{ background: "#C8E0FF" }}>
+      <HomeHeader title={header.title} text={header.text} info={header.info} />
+
+      <aside>
+        <img
+          className="d-none d-md-block w-100"
+          src="/img/waves.svg"
+          style={{ rotate: "-180deg", marginTop: "-2px" }}
+          alt="waves"
+        />
+      </aside>
+
+      <section>
         <Container>
-          <img className="img-fluid" src="/img/main.png" alt="" />
+          <article>
+            <h2>{projects.title}</h2>
+            <h5>{projects.text}</h5>
+          </article>
+          
+          <Row className="pb-5">
+            {projects.info.map((project, i) => (
+              <Project
+                pd
+                key={i}
+                title={project.title}
+                img={project.img}
+                text={project.text}
+              />
+            ))}
+          </Row>
         </Container>
-      </div>
-
-      <Section>
-        <h1>SKN DIALOG</h1>
-        <p className="text-center">
-          Witamy na oficjalnej stronie Studenckiego Koła Naukowego
-          &ldquo;Dialog&ldquo; działającego przy Wydziale Psychologii
-          Uniwersytetu Warszawskiego.
-        </p>
-      </Section>
-
-      <Section>
-        <Partners />
-      </Section>
+      </section>
     </Layout>
   );
 };

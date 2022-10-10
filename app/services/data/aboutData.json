@@ -1,0 +1,46 @@
+{
+  "header": {
+    "title": "KIM JESTEŚMY?",
+    "text": "Poznaj nasz zarząd!"
+  },
+  "guard": {
+    "title": "Opiekun Koła - dr hab. Anna Cierpka",
+    "text": "Jestem psychologiem, adiunktem Wydziału Psychologii Uniwersytetu Warszawskiego. Moje zainteresowania naukowe skupiają się wokół rodziny jako środowiska wychowawczego oraz tematyki narracji. Jestem współredaktorem książek Narracja: koncepcje i badania psychologiczne oraz Psychologia narracyjna. Tożsamość, dialogowość, pogranicza i autorem wielu tekstów poświęconych problematyce narracji. W praktyce psychologicznej (Centrum Pomocy Profesjonalnej) wykorzystuję założenia terapii systemowej i techniki terapii narracyjnej. Hobby to przede wszystkim dbanie o ogród i kwiaty. I podróże"
+  },
+  "administration": {
+    "title": "Zarząd",
+    "text": "Rok akademicki 2022/23",
+    "info": [
+      {
+        "title": "Marcin Bagiński",
+        "text": "Prezes koła",
+        "img": "/img/team/mb.png"
+      },
+      {
+        "title": "Michalina Zienkiewicz",
+        "text": "Wiceprezeska koła i specjalistka ds. HR",
+        "img": "/img/team/mz.png"
+      },
+      {
+        "title": "Karolina Marcinkowska",
+        "text": "Specjalistka ds. PR",
+        "img": "/img/team/km.png"
+      },
+      {
+        "title": "Róża Iwańska",
+        "text": "Specjalistka ds. finansowych",
+        "img": "/img/team/ri.png"
+      },
+      {
+        "title": "Magdalena Michałowska",
+        "text": "Specjalistka ds. eventów",
+        "img": "/img/team/mm.png"
+      },
+      {
+        "title": "Oliwia Wieczorek",
+        "text": "Specjalistka ds. eventów",
+        "img": "/img/team/ow.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+.item {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 5rem;
+}
+
+.round {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 2px solid #8b8b8b;
+  border-radius: 50%;
+  padding: 8px;
+  z-index: 4;
+  position: absolute;
+  left: -18px;
+  top: 20px;
+}
+
+.time {
+  color: #fdae9c;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.title {
+  font-size: 1.1rem;
+  color: #525252;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  font-size: 1.1rem !important;
+}
+
+.round div {
+  background-color: #fdae9c;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.line {
+  display: block;
+  width: 4px;
+  border-radius: 4px;
+  height: 140%;
+  background-color: #8b8b8b;
+  transform: translateY(-20px);
+}
+
+.phase {
+  letter-spacing: 0.1rem;
+  color: #8b8b8b;
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    column-gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .item {
+    column-gap: 1.5rem;
+  }
+
+  .line {
+    width: 3px;
+  }
+
+  .round {
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+    left: -11px;
+    top: 20px;
+  }
+
+  .time {
+    color: #fdae9c;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .round div {
+    width: 12.5px;
+    height: 12.5px;
+  }
+
+  .title {
+    letter-spacing: 0.05rem;
+    font-size: 0.9rem !important;
+  }
+}

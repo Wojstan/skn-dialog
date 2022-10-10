@@ -2,10 +2,7 @@
   "compilerOptions": {
     "baseUrl": "app",
     "paths": {
-      "@About/*": ["components/About/*"],
-      "@global/*": ["components/global/*"],
-      "@Home/*": ["components/Home/*"],
-      "@Posts/*": ["components/Posts/*"],
+      "@components/*": ["components/*"],
       "@hooks/*": ["hooks/*"]
     },
     "target": "es5",

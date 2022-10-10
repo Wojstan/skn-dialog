@@ -1,0 +1,23 @@
+{
+  "header": {
+    "title": "Chcesz do nas dołączyć?",
+    "text": "Nie zwlekaj, już dziś zgłoś się do naszego koła przez formularz rekrutacyjny, a my zaprosimy Cię na rozmowę rekrutacyjną."
+  },
+  "timeline": {
+    "title": "Rekrutacja na osi czasu",
+    "info": [
+      {
+        "title": "REJESTRACJA",
+        "time": "17-23.10"
+      },
+      {
+        "title": "ROZMOWY KWALIFIKACYJNE",
+        "time": "24.10-4.11"
+      },
+      {
+        "title": "OGŁOSZENIE WYNIKÓW",
+        "time": "6.11"
+      }
+    ]
+  }
+}
