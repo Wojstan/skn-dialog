@@ -37,7 +37,7 @@ const Home: NextPage<HomeInterface> = ({ data }) => {
         <Container>
           <article>
             <h2>{projects.title}</h2>
-            <h5>{projects.text}</h5>
+            <h5 className="mb-5">{projects.text}</h5>
           </article>
           
           <Row className="pb-5">

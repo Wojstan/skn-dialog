@@ -10,7 +10,7 @@ const Waves: FC<WavesProps> = ({ rotate, src }) => (
     <img
       className="d-none d-md-block w-100"
       src={src}
-      style={{ rotate: rotate ? "-180deg" : "" }}
+      style={{ transform: rotate ? "rotate(-180deg)" : "" }}
       alt="waves"
     />
   </aside>

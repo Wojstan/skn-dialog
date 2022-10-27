@@ -42,9 +42,19 @@ const Footer: React.FC = () => (
           <img src="/img/logo_stopka.png" alt="" />
         </Col>
       </Row>
-      <p>
-        <small>© 2022 Wszelkie prawa zastrzeżone</small>
-      </p>
+
+      <div className="mt-4 mb-2 text-muted">
+        Projekt i wykonanie strony <br className="d-md-none" />
+        <a
+          href="https://ws-portfolio.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <strong>Wojciech Staniszewski</strong>
+        </a>
+      </div>
+
+      <small className="text-muted">© 2022 Wszelkie prawa zastrzeżone</small>
     </Container>
   </footer>
 );

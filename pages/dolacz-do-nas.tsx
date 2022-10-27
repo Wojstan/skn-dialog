@@ -30,24 +30,10 @@ const Join: NextPage<JoinInterface> = ({ data }) => {
           />
         </aside>
 
-        <article>
+        <article className="pb-5">
           <h2>{header.title}</h2>
           <h5>{header.text}</h5>
         </article>
-
-        <h4 className="text-center mb-5">
-          <a
-            href="https://warsawpsy.eu.qualtrics.com/jfe/form/SV_e52LdEUtHjiJN7E"
-            target="_blank"
-            rel="noreferrer"
-          >
-            [Kliknij tutaj, żeby przejść do formularza rekrutacyjnego]
-          </a>
-        </h4>
-
-        <div className="text-center pb-5">
-          <img style={{ borderRadius: "1rem" }} src="/img/qr.png" alt="" />
-        </div>
       </header>
 
       <Waves src="/img/waves.svg" rotate />
@@ -56,6 +42,7 @@ const Join: NextPage<JoinInterface> = ({ data }) => {
         <Container>
           <article className="pb-5">
             <h3 className="text-center">{timeline.title}</h3>
+            <h5>{timeline.text}</h5>
 
             <Timeline data={timeline.info} />
           </article>

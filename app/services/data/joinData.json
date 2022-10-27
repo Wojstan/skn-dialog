@@ -1,10 +1,11 @@
 {
   "header": {
-    "title": "Chcesz do nas dołączyć?",
-    "text": "Nie zwlekaj, już dziś zgłoś się do naszego koła przez formularz rekrutacyjny, a my zaprosimy Cię na rozmowę rekrutacyjną."
+    "title": "Rekrutacja zakończona!",
+    "text": "Rekrutacja na rok akademicki 2022/23 została zakończona. Zapraszamy do dołączenia w następnym roku!"
   },
   "timeline": {
-    "title": "Rekrutacja na osi czasu",
+    "title": "Uwaga!",
+    "text": "W związku z bardzo dużym zainteresowaniem, wyniki rekrutacji zostaną podane mailowo później niż 6.11!",
     "info": [
       {
         "title": "REJESTRACJA",
