@@ -1,7 +1,7 @@
 {
   "header": {
     "title": "KIM JESTEŚMY?",
-    "text": "Poznaj nasz zarząd!"
+    "text": "Poznaj osoby, które tworzą dla Was Dialog!"
   },
   "guard": {
     "title": "Opiekun Koła - dr hab. Anna Cierpka",
@@ -34,12 +34,12 @@
       {
         "title": "Julia Ukielska",
         "text": "Wsparcie Zarządu",
-        "img": "/img/team/ri.png"
+        "img": ""
       },
       {
         "title": "Julia Miązek",
         "text": "Wsparcie Zarządu",
-        "img": "/img/team/ri.png"
+        "img": ""
       }
     ]
   }

@@ -1,23 +1,22 @@
 {
   "header": {
-    "title": "Rekrutacja zakończona!",
-    "text": "Rekrutacja na rok akademicki 2022/23 została zakończona. Zapraszamy do dołączenia w następnym roku!"
+    "title": "Rekrutacja trwa!",
+    "text": "Rekrutacja na rok akademicki 2023/24 jest w trakcie. Do 22/10 moliwe są zgłoszenia pod linkiem: https://linktr.ee/skndialog"
   },
   "timeline": {
-    "title": "Uwaga!",
-    "text": "W związku z bardzo dużym zainteresowaniem, wyniki rekrutacji zostaną podane mailowo później niż 6.11!",
+    "title": "Harmonogram rekrutacji ponizej:",
     "info": [
       {
         "title": "REJESTRACJA",
-        "time": "10-23.10"
+        "time": "10-22.10"
       },
       {
         "title": "ROZMOWY KWALIFIKACYJNE",
-        "time": "24.10-4.11"
+        "time": "16.10-27.10"
       },
       {
         "title": "OGŁOSZENIE WYNIKÓW",
-        "time": "6.11"
+        "time": "do końca listopada"
       }
     ]
   }
