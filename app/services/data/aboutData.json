@@ -9,7 +9,7 @@
   },
   "administration": {
     "title": "Zarząd",
-    "text": "Rok akademicki 2022/23",
+    "text": "Rok akademicki 2023/24",
     "info": [
       {
         "title": "Marcin Bagiński",
@@ -28,8 +28,18 @@
       },
       {
         "title": "Oliwia Wieczorek",
-        "text": "Specjalistka ds. eventów",
+        "text": "Specjalistka ds. konferencji",
         "img": "/img/team/ow.png"
+      },
+      {
+        "title": "Julia Ukielska",
+        "text": "Wsparcie Zarządu",
+        "img": "/img/team/ri.png"
+      },
+      {
+        "title": "Julia Miązek",
+        "text": "Wsparcie Zarządu",
+        "img": "/img/team/ri.png"
       }
     ]
   }
