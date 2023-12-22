@@ -1,24 +1,24 @@
-import HomeHeader from "@components/HomeHeader/HomeHeader";
-import Layout from "@components/Layout/Layout";
-import Project from "@components/Project/Project";
-import { HomeInterface } from "interfaces/HomeInterface";
-import type { NextPage } from "next";
+import HomeHeader from '@components/HomeHeader/HomeHeader'
+import Layout from '@components/Layout/Layout'
+import Project from '@components/Project/Project'
+import { HomeInterface } from 'interfaces/HomeInterface'
+import type { NextPage } from 'next'
 
-import { Container, Row } from "react-bootstrap";
-import { getHomeData } from "services/api-services";
+import { Container, Row } from 'react-bootstrap'
+import { getHomeData } from 'services/api-services'
 
 export function getStaticProps() {
-  const homeData = getHomeData();
+  const homeData = getHomeData()
 
   return {
     props: {
       data: homeData,
     },
-  };
+  }
 }
 
 const Home: NextPage<HomeInterface> = ({ data }) => {
-  const { projects, header } = data;
+  const { projects, header } = data
 
   return (
     <Layout>
@@ -28,7 +28,7 @@ const Home: NextPage<HomeInterface> = ({ data }) => {
         <img
           className="d-none d-md-block w-100"
           src="/img/waves.svg"
-          style={{ rotate: "-180deg", marginTop: "-2px" }}
+          style={{ rotate: '-180deg', marginTop: '-2px' }}
           alt="waves"
         />
       </aside>
@@ -39,22 +39,16 @@ const Home: NextPage<HomeInterface> = ({ data }) => {
             <h2>{projects.title}</h2>
             <h5 className="mb-5">{projects.text}</h5>
           </article>
-          
+
           <Row className="pb-5">
             {projects.info.map((project, i) => (
-              <Project
-                pd
-                key={i}
-                title={project.title}
-                img={project.img}
-                text={project.text}
-              />
+              <Project pd key={i} title={project.title} img={project.img} text={project.text} />
             ))}
           </Row>
         </Container>
       </section>
     </Layout>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -1,16 +1,16 @@
-import { FC } from "react";
+import { FC } from 'react'
 
 type InfoBlockProps = {
-  title: string;
-  text?: string;
-  img: string;
-  even?: boolean;
-};
+  title: string
+  text?: string
+  img: string
+  even?: boolean
+}
 
 const InfoBlock: FC<InfoBlockProps> = ({ title, text, img, even }) => (
   <li
     className={`d-flex flex-column justify-content-center align-items-center m-2 mb-4 flex-lg-row ${
-      even ? "flex-lg-row-reverse" : ""
+      even ? 'flex-lg-row-reverse' : ''
     }`}
   >
     <div>
@@ -19,6 +19,6 @@ const InfoBlock: FC<InfoBlockProps> = ({ title, text, img, even }) => (
     </div>
     <img className="p-2 img-fluid" src={img} alt={title} />
   </li>
-);
+)
 
-export default InfoBlock;
+export default InfoBlock

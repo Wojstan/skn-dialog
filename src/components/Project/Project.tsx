@@ -1,23 +1,20 @@
-import { FC } from "react";
-import { Col } from "react-bootstrap";
+import { FC } from 'react'
+import { Col } from 'react-bootstrap'
 
-import styles from "./Project.module.css";
+import styles from './Project.module.css'
 
 type ProjectProps = {
-  img: string;
-  title: string;
-  text?: string;
-  pd?: boolean;
-};
+  img: string
+  title: string
+  text?: string
+  pd?: boolean
+}
 
 const Project: FC<ProjectProps> = ({ img, title, text, pd }) => {
   return (
     <Col className="text-center p-4" md="6" xl="4">
       <div className={styles.flex}>
-        <div
-          style={{ padding: pd ? "1.3rem" : undefined }}
-          className={styles.avatar}
-        >
+        <div style={{ padding: pd ? '1.3rem' : undefined }} className={styles.avatar}>
           <img className="img-fluid" src={img} alt={title} />
         </div>
 
@@ -27,7 +24,7 @@ const Project: FC<ProjectProps> = ({ img, title, text, pd }) => {
         </p>
       </div>
     </Col>
-  );
-};
+  )
+}
 
-export default Project;
+export default Project

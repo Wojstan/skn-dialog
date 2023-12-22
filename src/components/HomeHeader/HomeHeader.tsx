@@ -1,29 +1,21 @@
-import { HomeBlocks } from "interfaces/HomeInterface";
-import Link from "next/link";
-import { FC } from "react";
-import { Button, Container } from "react-bootstrap";
-import InfoBlock from "../InfoBlock/InfoBlock";
+import { HomeBlocks } from 'interfaces/HomeInterface'
+import Link from 'next/link'
+import { FC } from 'react'
+import { Button, Container } from 'react-bootstrap'
+import InfoBlock from '../InfoBlock/InfoBlock'
 
-type HeaderProps = HomeBlocks;
+type HeaderProps = HomeBlocks
 
 const HomeHeader: FC<HeaderProps> = ({ title, text, info }) => (
   <header className="bg-gray">
-    <div className="text-center" style={{ background: "#C8E0FF" }}>
+    <div className="text-center" style={{ background: '#C8E0FF' }}>
       <Container>
-        <img
-          className="main-image img-fluid"
-          src="/img/main.png"
-          alt="SKN Dialog"
-        />
+        <img className="main-image img-fluid" src="/img/main.png" alt="SKN Dialog" />
       </Container>
     </div>
 
     <aside>
-      <img
-        className="d-none d-md-block w-100"
-        src="/img/waves_blue.svg"
-        alt="waves-blue"
-      />
+      <img className="d-none d-md-block w-100" src="/img/waves_blue.svg" alt="waves-blue" />
     </aside>
 
     <article>
@@ -37,13 +29,7 @@ const HomeHeader: FC<HeaderProps> = ({ title, text, info }) => (
       <Container>
         <ul>
           {info.map((item, i) => (
-            <InfoBlock
-              key={i}
-              even={Boolean(i % 2)}
-              title={item.title}
-              text={item.text}
-              img={item.img}
-            />
+            <InfoBlock key={i} even={Boolean(i % 2)} title={item.title} text={item.text} img={item.img} />
           ))}
         </ul>
 
@@ -55,6 +41,6 @@ const HomeHeader: FC<HeaderProps> = ({ title, text, info }) => (
       </Container>
     </article>
   </header>
-);
+)
 
-export default HomeHeader;
+export default HomeHeader

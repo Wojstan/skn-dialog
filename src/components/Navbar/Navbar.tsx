@@ -1,31 +1,26 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-import styles from "./Navbar.module.css";
-import React from "react";
-import Link from "next/link";
+import styles from './Navbar.module.css'
+import React from 'react'
+import Link from 'next/link'
 
 const menuData = [
   {
-    label: "Strona główna",
-    link: "/",
+    label: 'Strona główna',
+    link: '/',
   },
   {
-    label: "Kim jesteśmy?",
-    link: "/kim-jestesmy",
+    label: 'Kim jesteśmy?',
+    link: '/kim-jestesmy',
   },
-];
+]
 
 const Menu = () => {
   return (
     <nav className={styles.menu}>
       <Link href="/">
-        <img
-          className="img-fluid"
-          src="/img/blue-logo.png"
-          alt="SKN DIALOG"
-          style={{ cursor: "pointer" }}
-        />
+        <img className="img-fluid" src="/img/blue-logo.png" alt="SKN DIALOG" style={{ cursor: 'pointer' }} />
       </Link>
 
       <div className="d-flex flex-column align-items-center flex-xl-row">
@@ -39,20 +34,12 @@ const Menu = () => {
 
         <ul>
           <li>
-            <a
-              href="https://www.facebook.com/SKNdialog/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://www.facebook.com/SKNdialog/" target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
           </li>
           <li>
-            <a
-              href="https://www.instagram.com/dialog_skn/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://www.instagram.com/dialog_skn/" target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </li>
@@ -65,7 +52,7 @@ const Menu = () => {
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Menu;
+export default Menu

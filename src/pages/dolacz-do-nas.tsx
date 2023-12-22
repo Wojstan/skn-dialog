@@ -1,33 +1,29 @@
-import Layout from "@components/Layout/Layout";
-import Timeline from "@components/Timeline/Timeline";
-import Waves from "@components/Waves/Waves";
-import { JoinInterface } from "interfaces/JoinInterface";
-import type { NextPage } from "next";
-import { Container } from "react-bootstrap";
-import { getJoinData } from "services/api-services";
+import Layout from '@components/Layout/Layout'
+import Timeline from '@components/Timeline/Timeline'
+import Waves from '@components/Waves/Waves'
+import { JoinInterface } from 'interfaces/JoinInterface'
+import type { NextPage } from 'next'
+import { Container } from 'react-bootstrap'
+import { getJoinData } from 'services/api-services'
 
 export function getStaticProps() {
-  const joinData = getJoinData();
+  const joinData = getJoinData()
 
   return {
     props: {
       data: joinData,
     },
-  };
+  }
 }
 
 const Join: NextPage<JoinInterface> = ({ data }) => {
-  const { timeline, header } = data;
+  const { timeline, header } = data
 
   return (
     <Layout>
       <header className="bg-gray">
         <aside>
-          <img
-            className="d-none d-md-block w-100"
-            src="/img/waves_blue.svg"
-            alt="waves-blue"
-          />
+          <img className="d-none d-md-block w-100" src="/img/waves_blue.svg" alt="waves-blue" />
         </aside>
 
         <article className="pb-5">
@@ -49,7 +45,7 @@ const Join: NextPage<JoinInterface> = ({ data }) => {
         </Container>
       </section>
     </Layout>
-  );
-};
+  )
+}
 
-export default Join;
+export default Join
