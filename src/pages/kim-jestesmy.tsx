@@ -1,23 +1,23 @@
-import Layout from "@components/Layout/Layout";
-import Project from "@components/Project/Project";
-import Waves from "@components/Waves/Waves";
-import { AboutInterface } from "interfaces/AboutInterface";
-import type { NextPage } from "next";
-import { Container, Row } from "react-bootstrap";
-import { getAboutData } from "services/api-services";
+import Layout from '@components/Layout/Layout'
+import Project from '@components/Project/Project'
+import Waves from '@components/Waves/Waves'
+import { AboutInterface } from 'interfaces/AboutInterface'
+import type { NextPage } from 'next'
+import { Container, Row } from 'react-bootstrap'
+import { getAboutData } from 'services/api-services'
 
 export function getStaticProps() {
-  const aboutData = getAboutData();
+  const aboutData = getAboutData()
 
   return {
     props: {
       data: aboutData,
     },
-  };
+  }
 }
 
 const About: NextPage<AboutInterface> = ({ data }) => {
-  const { header, guard, administration } = data;
+  const { header, guard, administration } = data
 
   return (
     <Layout>
@@ -50,18 +50,13 @@ const About: NextPage<AboutInterface> = ({ data }) => {
 
           <Row className="pb-5">
             {administration.info.map((project, i) => (
-              <Project
-                key={i}
-                title={project.title}
-                img={project.img}
-                text={project.text}
-              />
+              <Project key={i} title={project.title} img={project.img} text={project.text} />
             ))}
           </Row>
         </Container>
       </section>
     </Layout>
-  );
-};
+  )
+}
 
-export default About;
+export default About
