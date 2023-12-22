@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -6,7 +6,7 @@ import SSRProvider from "react-bootstrap/SSRProvider";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { useRouter } from "next/router";
-import getPageTitle from "../utils/getPageTitle";
+import getPageTitle from "../../utils/getPageTitle";
 
 config.autoAddCss = false;
 
