@@ -1,6 +1,6 @@
 import { DefaultLayout } from 'components/Layout/DefaultLayout'
 import { Waves } from 'components/Common/Waves'
-import { Timeline } from 'components/Common/Timeline/Timeline'
+import { Timeline } from 'components/Common/Timeline'
 import { header, timeline } from 'constants/Join'
 import { Subtitle } from 'components/Common/Subtitle'
 import { Description } from 'components/Common/Description'
