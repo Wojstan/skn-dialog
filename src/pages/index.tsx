@@ -1,54 +1,67 @@
-import HomeHeader from '@components/HomeHeader/HomeHeader'
-import Layout from '@components/Layout/Layout'
-import Project from '@components/Project/Project'
-import { HomeInterface } from 'interfaces/HomeInterface'
-import type { NextPage } from 'next'
+import Head from 'next/head'
+import { DefaultLayout } from 'components/Layout/DefaultLayout'
+import { header, projects } from 'constants/Home'
+import { ContentBlock } from 'components/Common/ContentBlock'
+import { Description } from 'components/Common/Description'
+import { InfoBlock } from 'components/Common/InfoBlock'
+import { Button } from 'components/Common/Button'
+import { Waves } from 'components/Common/Waves'
+import { Title } from 'components/Common/Title'
+import { Subtitle } from 'components/Common/Subtitle'
 
-import { Container, Row } from 'react-bootstrap'
-import { getHomeData } from 'services/api-services'
-
-export function getStaticProps() {
-  const homeData = getHomeData()
-
-  return {
-    props: {
-      data: homeData,
-    },
-  }
-}
-
-const Home: NextPage<HomeInterface> = ({ data }) => {
-  const { projects, header } = data
-
+export default function Home() {
   return (
-    <Layout>
-      <HomeHeader title={header.title} text={header.text} info={header.info} />
+    <>
+      <Head>
+        <title>SKN Dialog - Strona główna</title>
+      </Head>
+      <DefaultLayout background="gray">
+        <header>
+          <div className="text-center bg-lighterBlue">
+            <img className="m-auto object-cover max-h-80" src="/images/main.png" alt="SKN Dialog" />
+          </div>
 
-      <aside>
-        <img
-          className="d-none d-md-block w-100"
-          src="/img/waves.svg"
-          style={{ rotate: '-180deg', marginTop: '-2px' }}
-          alt="waves"
-        />
-      </aside>
+          <Waves color="blue" />
+        </header>
 
-      <section>
-        <Container>
-          <article>
-            <h2>{projects.title}</h2>
-            <h5 className="mb-5">{projects.text}</h5>
+        <section className="bg-gray" id="main">
+          <article className="container m-auto">
+            <div className="text-center mt-10 mb-24">
+              <Title>{header.title}</Title>
+              <Description>{header.text}</Description>
+            </div>
+
+            <ul>
+              {header.info.map((info, index) => (
+                <InfoBlock key={index} content={info} />
+              ))}
+            </ul>
+
+            <div className="text-center mt-5 pb-5">
+              <Button href="/dolacz-do-nas" variant="pink">
+                Dołącz do nas!
+              </Button>
+            </div>
+          </article>
+        </section>
+
+        <section className="bg-white">
+          <Waves color="gray" rotate />
+
+          <article className="container m-auto text-center my-10 pt-10 md:pt-0">
+            <Subtitle>{projects.title}</Subtitle>
+            <Description>{projects.text}</Description>
+
+            <div className="grid md:grid-cols-3 gap-10 my-20">
+              {projects.info.map((project, index) => (
+                <ContentBlock content={project} key={index} />
+              ))}
+            </div>
           </article>
 
-          <Row className="pb-5">
-            {projects.info.map((project, i) => (
-              <Project pd key={i} title={project.title} img={project.img} text={project.text} />
-            ))}
-          </Row>
-        </Container>
-      </section>
-    </Layout>
+          <Waves />
+        </section>
+      </DefaultLayout>
+    </>
   )
 }
-
-export default Home
