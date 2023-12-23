@@ -5,10 +5,14 @@ import { DefaultLayout } from 'components/Layout/DefaultLayout'
 import { Title } from 'components/Common/Title'
 import { Description } from 'components/Common/Description'
 import { Subtitle } from 'components/Common/Subtitle'
+import Head from 'next/head'
 
 export default function About() {
   return (
     <>
+      <Head>
+        <title>SKN Dialog - Kim jesteśmy?</title>
+      </Head>
       <DefaultLayout background="gray">
         <header>
           <Waves color="blue" />
