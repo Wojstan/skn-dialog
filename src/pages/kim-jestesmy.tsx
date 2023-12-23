@@ -1,62 +1,55 @@
-import Layout from '@components/Layout/Layout'
-import Project from '@components/Project/Project'
-import Waves from '@components/Waves/Waves'
-import { AboutInterface } from 'interfaces/AboutInterface'
-import type { NextPage } from 'next'
-import { Container, Row } from 'react-bootstrap'
-import { getAboutData } from 'services/api-services'
+import { administration, header, protector } from 'constants/About'
+import { Waves } from 'components/Common/Waves'
+import { ContentBlock } from 'components/Common/ContentBlock'
+import { DefaultLayout } from 'components/Layout/DefaultLayout'
+import { Title } from 'components/Common/Title'
+import { Description } from 'components/Common/Description'
+import { Subtitle } from 'components/Common/Subtitle'
+import Head from 'next/head'
 
-export function getStaticProps() {
-  const aboutData = getAboutData()
-
-  return {
-    props: {
-      data: aboutData,
-    },
-  }
-}
-
-const About: NextPage<AboutInterface> = ({ data }) => {
-  const { header, guard, administration } = data
-
+export default function About() {
   return (
-    <Layout>
-      <header className="bg-gray">
-        <Waves src="/img/waves_blue.svg" />
+    <>
+      <Head>
+        <title>SKN Dialog - Kim jesteśmy?</title>
+      </Head>
+      <DefaultLayout background="gray">
+        <header>
+          <Waves color="blue" />
 
-        <article className="pb-1">
-          <h2>{header.title}</h2>
-          <h5>{header.text}</h5>
-        </article>
-      </header>
-
-      <section id="opiekun" className="bg-gray">
-        <Container>
-          <article className="text-center">
-            <h3>{guard.title}</h3>
-            <p className="pb-5 mb-0">{guard.text}</p>
+          <article className="container text-center m-auto py-16">
+            <Title>{header.title}</Title>
+            <Description>{header.text}</Description>
           </article>
-        </Container>
-      </section>
+        </header>
 
-      <Waves src="/img/waves.svg" rotate />
+        <Waves rotate />
 
-      <section id="zarzad">
-        <Container>
-          <article className="mb-5">
-            <h3>{administration.title}</h3>
-            <p>{administration.text}</p>
+        <section id="team">
+          <article className="container m-auto text-center mb-10">
+            <Subtitle>{administration.title}</Subtitle>
+            <Description>{administration.text}</Description>
           </article>
 
-          <Row className="pb-5">
-            {administration.info.map((project, i) => (
-              <Project key={i} title={project.title} img={project.img} text={project.text} />
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-16">
+            {administration.info.map((project, index) => (
+              <ContentBlock content={project} key={index} />
             ))}
-          </Row>
-        </Container>
-      </section>
-    </Layout>
+          </div>
+        </section>
+
+        <section id="protector" className="bg-white">
+          <Waves rotate />
+
+          <article className="container m-auto my-20 max-w-3xl text-center p-4">
+            <img className="h-28 m-auto mb-10 rounded-full mt-10 md:mt-0" src="/images/team/ac.jpeg" alt="Anna Cierpka" />
+            <Subtitle>{protector.title}</Subtitle>
+            <Description>{protector.text}</Description>
+          </article>
+
+          <Waves />
+        </section>
+      </DefaultLayout>
+    </>
   )
 }
-
-export default About

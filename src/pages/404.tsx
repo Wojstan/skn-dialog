@@ -1,21 +1,14 @@
-import type { NextPage } from 'next'
+import { Subtitle } from 'components/Common/Subtitle'
 import Link from 'next/link'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
-const Custom404: NextPage = () => (
-  <Container className="d-flex" style={{ height: '100vh' }}>
-    <Row className="justify-content-center w-100 my-auto text-center">
-      <Col sm="12">
-        <img src="/img/404-logo.png" alt="404" className="img-fluid mb-1" />
-        <h2 style={{ marginBottom: '5rem' }}>404 - Nie znaleziono strony</h2>
-        <Link href="/">
-          <span className="gray-link">Wróć na stronę główną</span>
-        </Link>
-      </Col>
-    </Row>
-  </Container>
-)
-
-export default Custom404
+export default function Custom404() {
+  return (
+    <div className="flex items-center justify-center flex-col gap-4 pt-28">
+      <img src="/images/404-logo.png" alt="404" className="h-28 mb-1" />
+      <Subtitle>404 - Nie znaleziono strony</Subtitle>
+      <Link href="/">
+        <span className="text-light hover:text-pink cursor-pointer">Wróć na stronę główną</span>
+      </Link>
+    </div>
+  )
+}
