@@ -16,22 +16,26 @@ export default function Join() {
         <header>
           <Waves color="blue" />
 
-          <article className="container m-auto my-20 text-center">
+          <article className="container m-auto my-36 text-center">
             <Subtitle>{header.title}</Subtitle>
             <Description>{header.text}</Description>
           </article>
         </header>
 
-        <section id="os-czasu">
-          <article className="container m-auto my-20 text-center">
-            <Subtitle>{timeline.title}</Subtitle>
+        {showTimeline && (
+          <section id="timeline">
+            <article className="container m-auto my-20 text-center">
+              <Subtitle>{timeline.title}</Subtitle>
 
-            <Timeline data={timeline.info} />
-          </article>
-        </section>
+              <Timeline data={timeline.info} />
+            </article>
+          </section>
+        )}
 
         <Waves />
       </DefaultLayout>
     </>
   )
 }
+
+const showTimeline = false

@@ -6,9 +6,10 @@ interface Props {
     title: string
     text?: string
   }
+  margin?: number
 }
 
-export function ContentBlock({ content }: Props) {
+export function ContentBlock({ content, margin =5 }: Props) {
   const { title, img, text } = content
 
   return (
@@ -18,7 +19,7 @@ export function ContentBlock({ content }: Props) {
       </div>
 
       <h4>{title}</h4>
-      <Description>
+      <Description margin={margin}>
         <small>{text}</small>
       </Description>
     </div>

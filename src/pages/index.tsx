@@ -25,7 +25,7 @@ export default function Home() {
         </header>
 
         <section className="bg-gray" id="main">
-          <article className="container m-auto">
+          <article className="container m-auto p-3">
             <div className="text-center mt-10 mb-24">
               <Title>{header.title}</Title>
               <Description>{header.text}</Description>
