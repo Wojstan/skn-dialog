@@ -17,7 +17,7 @@ export default function About() {
         <header>
           <Waves color="blue" />
 
-          <article className="container text-center m-auto py-16">
+          <article className="container text-center m-auto p-3 py-16">
             <Title>{header.title}</Title>
             <Description>{header.text}</Description>
           </article>
@@ -33,7 +33,7 @@ export default function About() {
 
           <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-16">
             {administration.info.map((project, index) => (
-              <ContentBlock content={project} key={index} />
+              <ContentBlock content={project} key={index} margin={3} />
             ))}
           </div>
         </section>
@@ -42,7 +42,11 @@ export default function About() {
           <Waves rotate />
 
           <article className="container m-auto my-20 max-w-3xl text-center p-4">
-            <img className="h-28 m-auto mb-10 rounded-full mt-10 md:mt-0" src="/images/team/ac.jpeg" alt="Anna Cierpka" />
+            <img
+              className="h-28 m-auto mb-10 rounded-full mt-10 md:mt-0"
+              src="/images/team/ac.jpeg"
+              alt="Anna Cierpka"
+            />
             <Subtitle>{protector.title}</Subtitle>
             <Description>{protector.text}</Description>
           </article>

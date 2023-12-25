@@ -17,7 +17,7 @@ export function Footer() {
           </a>
         </li>
         <li className="hover:text-pink transition-colors">
-          <a href="https://www.instagram.com/SKNdialog/" target="_blank" rel="noreferrer">
+          <a href="https://www.instagram.com/dialog_skn/" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
         </li>
