@@ -66,7 +66,7 @@ export default function Home() {
         </section>
 
         <section className="bg-gray">
-          <article className="container m-auto text-center mt-20 pb-20 md:pt-0">
+          <article className="container m-auto text-center mt-20 pb-20 md:pt-0 px-2">
             <Subtitle>{newsletter.title}</Subtitle>
             <Description>{newsletter.text}</Description>
 
