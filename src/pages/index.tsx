@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { DefaultLayout } from 'components/Layout/DefaultLayout'
-import { header, projects } from 'constants/Home'
+import { header, newsletter, projects } from 'constants/Home'
 import { ContentBlock } from 'components/Common/ContentBlock'
 import { Description } from 'components/Common/Description'
 import { InfoBlock } from 'components/Common/InfoBlock'
@@ -8,6 +8,9 @@ import { Button } from 'components/Common/Button'
 import { Waves } from 'components/Common/Waves'
 import { Title } from 'components/Common/Title'
 import { Subtitle } from 'components/Common/Subtitle'
+import { Newsletter } from 'components/Newsletter/Newsletter'
+import { faEnvelope, faMailBulk, faMailForward, faMailReply } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Home() {
   return (
@@ -60,6 +63,17 @@ export default function Home() {
           </article>
 
           <Waves />
+        </section>
+
+        <section className="bg-gray">
+          <article className="container m-auto text-center mt-20 pb-20 md:pt-0">
+            <Subtitle>{newsletter.title}</Subtitle>
+            <Description>{newsletter.text}</Description>
+
+            <FontAwesomeIcon className='text-pink text-[3rem] mt-3' icon={faEnvelope} />
+
+            <Newsletter />
+          </article>
         </section>
       </DefaultLayout>
     </>

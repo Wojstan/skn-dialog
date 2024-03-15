@@ -4,18 +4,22 @@ import { ReactNode } from 'react'
 interface Props {
   children: ReactNode
   variant: 'dark' | 'pink'
-  href: string
+  href?: string
 }
 
-export function Button({ children, variant, href }: Props) {
+export function Button({ children, variant, href, ...props }: Props) {
   const colors = {
     dark: 'text-lightBlue bg-black hover:text-pink',
     pink: 'text-white bg-pink hover:text-zinc-200',
   }[variant]
 
-  return (
-    <Link href={href}>
-      <button className={`${colors} p-3 min-w-40 rounded-lg border-none transition-colors`}>{children}</button>
-    </Link>
-  )
+  if (href) {
+    return (
+      <Link href={href}>
+        <button className={`${colors} p-3 min-w-40 rounded-lg border-none transition-colors`}>{children}</button>
+      </Link>
+    )
+  }
+
+ 
 }

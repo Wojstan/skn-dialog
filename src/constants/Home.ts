@@ -57,3 +57,8 @@ export const projects = {
     },
   ],
 }
+
+export const newsletter = {
+  title: 'Newsletter',
+  text: 'Zapisz się na listę osób, które otrzymują informację o organizowanych przez nas wydarzeniach!',
+}
