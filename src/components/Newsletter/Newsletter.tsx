@@ -35,7 +35,7 @@ export function Newsletter() {
     <form
       id="sib-form"
       onSubmit={handleSubmit}
-      className="mt-8 text-center max-w-[56rem] m-auto"
+      className="mt-8 text-center max-w-[56rem] m-auto px-3"
       data-type="subscription"
     >
       <input
@@ -55,16 +55,19 @@ export function Newsletter() {
           dotyczące przetwarzania danych osobowych.
         </label>
       </div>
-      <div className="text-sm text-zinc-300 font-light tracking-widest mb-4">
-        W każdej chwili możesz zrezygnować z otrzymywania wiadomości klikając na link w e-mailu.
-      </div>
 
-      {applicationSubmited && (
-        <div className="text-sm text-green-600 tracking-widest font-semibold mb-16">
-          <FontAwesomeIcon className="mr-1" icon={faCheckCircle} />
-          Gratulacje! Twój adres e-mail został pomyślnie zapisany do naszego newslettera.
+      <div className='mb-12'>
+        <div className="text-sm text-zinc-300 font-light tracking-widest mb-4">
+          W każdej chwili możesz zrezygnować z otrzymywania wiadomości klikając na link w e-mailu.
         </div>
-      )}
+
+        {applicationSubmited && (
+          <div className="text-sm text-green-600 tracking-widest font-semibold">
+            <FontAwesomeIcon className="mr-1" icon={faCheckCircle} />
+            Gratulacje! Twój adres e-mail został pomyślnie zapisany do naszego newslettera.
+          </div>
+        )}
+      </div>
 
       <button
         type="submit"
