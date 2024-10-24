@@ -29,12 +29,6 @@ export function Navbar() {
             </li>
           ))}
         </ul>
-
-        <div className='my-5 lg:my-0'>
-          <Button href="/dolacz-do-nas" variant="dark">
-            Dołącz do nas!
-          </Button>
-        </div>
       </div>
     </nav>
   )

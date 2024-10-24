@@ -23,7 +23,7 @@ export const header = {
 
 export const projects = {
   title: 'Nasze projekty',
-  text: 'Lista projektów funkcjonujących w roku akademickim 2023/24:',
+  text: 'Lista projektów funkcjonujących w roku akademickim 2024/25:',
   info: [
     {
       title: 'Ogólnopolska Konferencja Zaburzeń Osobowości',
@@ -34,11 +34,6 @@ export const projects = {
       title: 'Ogólnopolska Konferencja Psychoterapii Dzieci i Młodzieży',
       text: 'Konferencja odbywa się online. Temat konferencji dotyczy psychoterapii dzieci i młodzieży, w poprzednich latach były to zagadnienia związane z zaburzeniami odżywiania, traumą, rozwojem psychoseksualnym. ',
       img: '/images/projects/OKPDIZ.png',
-    },
-    {
-      title: 'Podcast "W Dialogu"',
-      text: 'Podcast przybliża tematy związane z psychologią kliniczną i psychoterapią w przestępny sposób. Jego celem jest proponowanie uniwersalnych pytań, które mogą okazać się ważne dla kadego z nas. Nagrania poprzedza spotkanie wewnętrzne członków projektu i dyskusja.',
-      img: '/images/projects/Podcast.png',
     },
     {
       title: 'Psychowieści',

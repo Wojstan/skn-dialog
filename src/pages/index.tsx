@@ -39,12 +39,6 @@ export default function Home() {
                 <InfoBlock key={index} content={info} />
               ))}
             </ul>
-
-            <div className="text-center mt-5 pb-5">
-              <Button href="/dolacz-do-nas" variant="pink">
-                Dołącz do nas!
-              </Button>
-            </div>
           </article>
         </section>
 
