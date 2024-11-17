@@ -5,7 +5,7 @@ export const header = {
 
 export const protector = {
   title: 'Opiekun Koła - dr hab. Anna Cierpka',
-  text: "Jestem psychologiem, adiunktem Wydziału Psychologii Uniwersytetu Warszawskiego. Moje zainteresowania naukowe skupiają się wokół rodziny jako środowiska wychowawczego oraz tematyki narracji. Jestem współredaktorem książek "Narracja: koncepcje i badania psychologiczne" oraz "Psychologia narracyjna. Tożsamość, dialogowość, pogranicza" i autorem wielu tekstów poświęconych problematyce narracji. W praktyce psychologicznej wykorzystuję założenia terapii systemowej i techniki terapii narracyjnej. Hobby to przede wszystkim dbanie o ogród i kwiaty. I podróże.",
+  text: 'Jestem psychologiem, adiunktem Wydziału Psychologii Uniwersytetu Warszawskiego. Moje zainteresowania naukowe skupiają się wokół rodziny jako środowiska wychowawczego oraz tematyki narracji. Jestem współredaktorem książek "Narracja: koncepcje i badania psychologiczne" oraz "Psychologia narracyjna. Tożsamość, dialogowość, pogranicza" i autorem wielu tekstów poświęconych problematyce narracji. W praktyce psychologicznej wykorzystuję założenia terapii systemowej i techniki terapii narracyjnej. Hobby to przede wszystkim dbanie o ogród i kwiaty. I podróże.',
 }
 
 export const administration = {
