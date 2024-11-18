@@ -1,6 +1,6 @@
 export const header = {
-  title: 'Najbliższa rekrutacja: październik 2024',
-  text: 'Rekrutacja na rok akademicki 2023/24 została zamknięta',
+  title: 'Najbliższa rekrutacja: październik 2025',
+  text: 'Rekrutacja na rok akademicki 2024/25 została zamknięta',
 }
 
 export const timeline = {

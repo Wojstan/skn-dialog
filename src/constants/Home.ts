@@ -27,7 +27,7 @@ export const projects = {
   info: [
     {
       title: 'Ogólnopolska Konferencja Zaburzeń Osobowości',
-      text: 'Konferencja odbywa się stacjonarnie. Co roku wybierane jest inne zaburzenie osobowości, które jest tematem przewodnim. W obecnym roku będzie nim narcyzm. Praca w projekcie koncentruje się na organizacji i przeprowadzeniu konferencji.',
+      text: 'Konferencja odbywa się stacjonarnie. Co roku wybierane jest inne zaburzenie osobowości, które jest tematem przewodnim. W obecnym roku będzie nim osobowość osobowość dyssocjalna. Praca w projekcie koncentruje się na organizacji i przeprowadzeniu konferencji.',
       img: '/images/projects/OKZO.webp',
     },
     {
