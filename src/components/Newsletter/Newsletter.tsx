@@ -12,7 +12,7 @@ export function Newsletter() {
 
     try {
       const url =
-        'https://4358fe60.sibforms.com/serve/MUIFAE_imoCwq8tapbnQXXDTlul2sYDbZGXuTE7cqLwd5QodBODSXywVh2DAB_DHGReXtsK9pXhRxHf2IgIQw4UylPffX_2JOMAO39wV5zCETm-itSdWjTL2m1if0FPrEPY8JHq0Jar99_LNP7GSJAzvs_rM7oAKZPxmUMt9NwJftwpYoCDxIXnsU-da_tC_06heEI2TNYd4Rj87'
+        'https://forms.gle/4ZuBSCtBdNRMUoDe6'
       e.currentTarget.reset()
       await fetch(url, {
         method: 'POST',
