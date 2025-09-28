@@ -12,25 +12,24 @@ export const administration = {
   title: 'Zarząd',
   text: 'Rok akademicki 2024/25',
   info: [
-    {
-      title: 'Julia Ukielska',
-      text: 'Prezeska Koła',
-      img: '/images/team/ju.png',
+        {
+      title: 'Wiktoria Vincent Kopecka',
+      text: 'Prezes Koła',
+      img: '/images/team/wvk.png',
     },
     {
       title: 'Julia Miążek',
-      text: 'Prezeska Koła',
+      text: 'Wiceprezeska Koła',
       img: '/images/team/jm.png',
-    },
-    {
-      title: 'Wiktoria Vincent Kopecka',
-      text: 'Członek Zarządu',
-      img: '/images/team/wvk.png',
     },
     {
       title: 'Natalia Koźmińska',
       text: 'Członkini Zarządu',
       img: '/images/team/nk.png',
+    },
+    {
+      title: 'Gabriela Kucharska',
+      text: 'Członkini Zarządu',
     },
   ],
 }

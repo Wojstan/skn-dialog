@@ -4,7 +4,7 @@ export const header = {
   info: [
     {
       title: 'Kim jesteśmy?',
-      text: 'SKN Dialog to działające od 12 lat największe koło naukowe na Wydziale Psychologii Uniwersytetu Warszawskiego. Skupiamy osoby zainteresowane tematyką psychoterapii i psychologii klinicznej.',
+      text: 'SKN Dialog to działające od 13 lat największe i najstarsze koło naukowe na Wydziale Psychologii Uniwersytetu Warszawskiego. Skupiamy osoby zainteresowane tematyką psychoterapii i psychologii klinicznej.',
       img: '/images/about/3.png',
     },
     {
@@ -31,9 +31,9 @@ export const projects = {
       img: '/images/projects/OKZO.webp',
     },
     {
-      title: 'Ogólnopolska Konferencja Psychoterapii Dzieci i Młodzieży',
-      text: 'Konferencja odbywa się online. Temat konferencji dotyczy psychoterapii dzieci i młodzieży, w poprzednich latach były to zagadnienia związane z zaburzeniami odżywiania, traumą, rozwojem psychoseksualnym. ',
-      img: '/images/projects/OKPDIZ.png',
+      title: 'Dialogi',
+      text: 'W ramach projektu przeprowadzane będą rozmowy z psychoterapeutkami i psychoterapeutami różnych nurtów. Będziemy poruszać tematy dotyczące zarówno ścieżki zawodowej, jak i szczegółów pracy w danym podejściu.',
+      img: '/images/projects/dialogi.png',
     },
     {
       title: 'Psychowieści',
@@ -49,6 +49,10 @@ export const projects = {
       title: 'Dyskusyjny Klub Filmowy PsychomUWi',
       text: 'Ten projekt został stworzony z myślą o osobach pasjonujących się kinem. Założeniem DKF Psycho mUWi jest łączenie wiedzy psychologicznej z wątkami, które znajdziemy w filmach czy serialach. ',
       img: '/images/projects/PMUWI.webp',
+    },
+    {
+      title: 'Projekt badawczy',
+      text: 'Więcej informacji wkrótce!',
     },
   ],
 }
