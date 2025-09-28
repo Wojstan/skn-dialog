@@ -1,6 +1,10 @@
+import { FormEvent, useState } from "react";
+
 const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   e.preventDefault();
   const formData = new FormData(e.currentTarget);
+
+const [applicationSubmited, setApplicationSubmited] = useState(false);
 
   const email = formData.get('EMAIL')?.toString() || '';
   const consent = formData.get('OPT_IN') ? 'Tak' : '';
