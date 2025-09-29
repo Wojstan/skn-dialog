@@ -53,6 +53,7 @@ export const projects = {
     {
       title: 'Projekt badawczy',
       text: 'Więcej informacji wkrótce!',
+      img: '',
     },
   ],
 }

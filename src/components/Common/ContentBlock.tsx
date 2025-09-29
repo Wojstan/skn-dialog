@@ -9,7 +9,7 @@ interface Props {
   margin?: number
 }
 
-export function ContentBlock({ content, margin =5 }: Props) {
+export function ContentBlock({ content, margin = 5 }: Props) {
   const { title, img, text } = content
 
   return (

@@ -30,6 +30,7 @@ export const administration = {
     {
       title: 'Gabriela Kucharska',
       text: 'Członkini Zarządu',
+      img: '/images/team/gk.png',
     },
   ],
 }
