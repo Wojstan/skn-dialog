@@ -91,7 +91,7 @@ export default function Home() {
         <title>SKN Dialog 2025 - Innovating Psychology Education</title>
         <meta name="description" content="Revolutionary student organization transforming psychology education" />
       </Head>
-      <DefaultLayout background="black">
+      <DefaultLayout background='white'>
         {/* Hero Section */}
         <header>
           <div>
