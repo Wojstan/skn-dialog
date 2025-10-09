@@ -1,10 +1,10 @@
 export const header = {
-  title: 'SKN DIALOG',
-  text: 'Witamy na oficjalnej stronie internetowej Studenckiego Koła Naukowego “Dialog” działającego przy Wydziale Psychologii Uniwersytetu Warszawskiego pod opieką dr. hab. Anny Cierpki.',
+  title: 'SKN DIALOG – Nowa Era',
+  text: 'Witamy na odświeżonej stronie Studenckiego Koła Naukowego “Dialog”! Poznaj nasze nowe projekty i dołącz do społeczności pasjonatów psychologii.',
   info: [
     {
       title: 'Kim jesteśmy?',
-      text: 'SKN Dialog to działające od 13 lat największe i najstarsze koło naukowe na Wydziale Psychologii Uniwersytetu Warszawskiego. Skupiamy osoby zainteresowane tematyką psychoterapii i psychologii klinicznej.',
+      text: 'SKN Dialog to najstarsze i najbardziej innowacyjne koło naukowe na Wydziale Psychologii UW. Łączymy ludzi z pasją do psychologii i rozwoju osobistego.',
       img: '/images/about/3.png',
     },
     {
@@ -18,12 +18,17 @@ export const header = {
       text: 'Zależy nam, aby każdy znalazł u nas coś dla siebie - niezależnie od tego, czy chce rozwijać się merytorycznie w obszarze psychologii czy psychoterapii, sprawach PR czy organizacji eventów. A może jeszcze w czymś innym...',
       img: '/images/about/1.png',
     },
+        {
+      title: 'Dummy change?',
+      text: 'SKN Dialog to najstarsze i najbardziej innowacyjne koło naukowe na Wydziale Psychologii UW. Łączymy ludzi z pasją do psychologii i rozwoju osobistego.',
+      img: '/images/about/3.png',
+    },
   ],
 }
 
 export const projects = {
-  title: 'Nasze projekty',
-  text: 'Lista projektów funkcjonujących w roku akademickim 2024/25:',
+  title: 'Nasze projekty i inicjatywy',
+  text: 'Poznaj nasze aktualne i nowe projekty na rok 2024/25. Dołącz do wybranego zespołu lub zaproponuj własny pomysł!',
   info: [
     {
       title: 'Ogólnopolska Konferencja Zaburzeń Osobowości',
@@ -54,6 +59,11 @@ export const projects = {
       title: 'Projekt badawczy',
       text: 'Więcej informacji wkrótce!',
       img: '',
+    },
+    {
+      title: 'Nowy projekt: Dialog AI',
+      text: 'Eksperymentalny projekt łączący psychologię z nowoczesną sztuczną inteligencją. Dołącz do zespołu i twórz przyszłość psychologii!',
+      img: '/images/projects/Podcast2.png',
     },
   ],
 }
