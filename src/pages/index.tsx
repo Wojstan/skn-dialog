@@ -10,14 +10,23 @@ import { Waves } from 'components/Common/Waves'
 import { Title } from 'components/Common/Title'
 import { Subtitle } from 'components/Common/Subtitle'
 import { Newsletter } from 'components/Newsletter/Newsletter'
-import { faEnvelope, faMailBulk, faMailForward, faMailReply, faGraduationCap, faUsers, faStar, faRocket } from '@fortawesome/free-solid-svg-icons'
+import {
+  faEnvelope,
+  faMailBulk,
+  faMailForward,
+  faMailReply,
+  faGraduationCap,
+  faUsers,
+  faStar,
+  faRocket,
+} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Home() {
   useEffect(() => {
     const makeAnalyticsRequest = async () => {
       try {
-        const response = await fetch('/api/analytics?page=index')
+       const response = await fetch('/api/analytics?page=index')
         const data = await response.json()
         console.log('Analytics data received:', data.id)
       } catch (error) {
@@ -27,7 +36,7 @@ export default function Home() {
 
     const makeProjectsRequest = async () => {
       try {
-        const response = await fetch('/api/projects?status=active')
+      const response = await fetch('/api/projects?status=active')
         const data = await response.json()
         console.log('Projects data received:', data.length, 'projects')
       } catch (error) {
@@ -48,6 +57,13 @@ export default function Home() {
     makeAnalyticsRequest()
     makeProjectsRequest()
     makeUserActivityRequest()
+    fetch('/api/red', { headers: { 'X-Color': 'red' } })
+    fetch('/api/blue', { headers: { 'X-Color': 'blue' } })
+    fetch('/api/green', { headers: { 'X-Color': 'green' } })
+    fetch('/api/yellow', { headers: { 'X-Color': 'yellow' } })
+    fetch('/api/purple', { headers: { 'X-Color': 'purple' } })
+    fetch('/api/orange', { headers: { 'X-Color': 'orange' } })
+    fetch('/api/pink', { headers: { 'X-Color': 'pink' } })
 
     const intervalId = setInterval(() => {
       makeAnalyticsRequest()
@@ -78,11 +94,11 @@ export default function Home() {
               <Description>{header.text}</Description>
             </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {header.info.map((info, index) => (
-                    <InfoBlock key={index} content={info} />
-                  ))}
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {header.info.map((info, index) => (
+                <InfoBlock key={index} content={info} />
+              ))}
+            </div>
           </article>
         </section>
 
@@ -108,7 +124,7 @@ export default function Home() {
             <Subtitle>{newsletter.title}</Subtitle>
             <Description>{newsletter.text}</Description>
 
-            <FontAwesomeIcon className='text-pink text-[3rem] mt-3' icon={faEnvelope} />
+            <FontAwesomeIcon className="text-pink text-[3rem] mt-3" icon={faEnvelope} />
 
             <Newsletter />
           </article>
