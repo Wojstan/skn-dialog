@@ -75,6 +75,12 @@ export default function handler(
         ? dummyProjects.filter(project => project.status === req.query.status)
         : dummyProjects
 
+      // Add custom headers for analysis
+      res.setHeader('X-API-Source', 'projects-endpoint')
+      res.setHeader('X-Request-UUID', `${Math.random().toString(36).substr(2, 12)}`)
+      res.setHeader('X-Environment', process.env.NODE_ENV || 'development')
+      res.setHeader('X-Response-Timestamp', new Date().toISOString())
+
       res.status(200).json(filteredProjects)
     }, Math.random() * 200 + 100) // Random delay between 100-300ms
   } else {

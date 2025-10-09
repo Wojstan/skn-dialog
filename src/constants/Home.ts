@@ -60,11 +60,6 @@ export const projects = {
       text: 'Więcej informacji wkrótce!',
       img: '',
     },
-    {
-      title: 'Nowy projekt: Dialog AI',
-      text: 'Eksperymentalny projekt łączący psychologię z nowoczesną sztuczną inteligencją. Dołącz do zespołu i twórz przyszłość psychologii!',
-      img: '/images/projects/Podcast2.png',
-    },
   ],
 }
 

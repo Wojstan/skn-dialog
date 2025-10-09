@@ -64,7 +64,7 @@ export default function Home() {
       </Head>
       <DefaultLayout background="gray">
         <header>
-          <div className="bg-lighterBlue">
+          <div className="text-center bg-lighterBlue">
             <img className="m-auto object-cover max-h-80" src="/images/main.png" alt="SKN Dialog" />
           </div>
 
@@ -73,16 +73,16 @@ export default function Home() {
 
         <section className="bg-gray" id="main">
           <article className="container m-auto p-3">
-            <div className="mt-10 mb-24">
+            <div className="text-center mt-10 mb-24">
               <Title>{header.title}</Title>
               <Description>{header.text}</Description>
             </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {header.info.map((info, index) => (
-                    <InfoBlock key={index} content={info} />
-                  ))}
-                </div>
+            <ul>
+              {header.info.map((info, index) => (
+                <InfoBlock key={index} content={info} />
+              ))}
+            </ul>
           </article>
         </section>
 
@@ -93,7 +93,7 @@ export default function Home() {
             <Subtitle>{projects.title}</Subtitle>
             <Description>{projects.text}</Description>
 
-            <div className="grid md:grid-cols-6 gap-10 my-20">
+            <div className="grid md:grid-cols-3 gap-10 my-20">
               {projects.info.map((project, index) => (
                 <ContentBlock content={project} key={index} />
               ))}
