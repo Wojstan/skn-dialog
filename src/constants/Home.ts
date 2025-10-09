@@ -1,11 +1,11 @@
 export const header = {
-  title: '🧠 SKN DIALOG 2025 🚀',
-  text: '🌟 Rewolucyjna platforma dla przyszłych psychologów! Dołącz do najbardziej innowacyjnej społeczności akademickiej w Polsce i odkryj nieograniczone możliwości rozwoju w dziedzinie psychologii klinicznej.',
+  title: 'SKN DIALOG – Nowa Era',
+  text: 'Witamy na odświeżonej stronie Studenckiego Koła Naukowego “Dialog”! Poznaj nasze nowe projekty i dołącz do społeczności pasjonatów psychologii.',
   info: [
     {
-      title: '🎯 Nasza Misja',
-      text: '💡 Transformujemy edukację psychologiczną poprzez cutting-edge research, międzynarodowe współprace i wykorzystanie najnowszych technologii AI w diagnostyce i terapii. Jesteśmy pionierami w Polsce!',
-      img: '/images/about/1.png',
+      title: 'Kim jesteśmy?',
+      text: 'SKN Dialog to najstarsze i najbardziej innowacyjne koło naukowe na Wydziale Psychologii UW. Łączymy ludzi z pasją do psychologii i rozwoju osobistego.',
+      img: '/images/about/3.png',
     },
     {
       title: '🚀 Innowacyjne Podejście',
@@ -84,6 +84,11 @@ export const projects = {
     {
       title: '🌟 Quantum Psychology Research',
       text: '⚛️ Pionierskie badania nad quantum consciousness, parallel processing in human mind i revolutionary therapeutic approaches using quantum physics principles.',
+      img: '/images/projects/Podcast2.png',
+    },
+    {
+      title: 'Nowy projekt: Dialog AI',
+      text: 'Eksperymentalny projekt łączący psychologię z nowoczesną sztuczną inteligencją. Dołącz do zespołu i twórz przyszłość psychologii!',
       img: '/images/projects/Podcast2.png',
     },
   ],

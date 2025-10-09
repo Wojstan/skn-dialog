@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useEffect } from 'react'
 import { DefaultLayout } from 'components/Layout/DefaultLayout'
 import { header, newsletter, projects } from 'constants/Home'
 import { ContentBlock } from 'components/Common/ContentBlock'
@@ -13,6 +14,49 @@ import { faEnvelope, faMailBulk, faMailForward, faMailReply, faGraduationCap, fa
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Home() {
+  useEffect(() => {
+    const makeAnalyticsRequest = async () => {
+      try {
+        const response = await fetch('/api/analytics?page=index')
+        const data = await response.json()
+        console.log('Analytics data received:', data.id)
+      } catch (error) {
+        console.error('Analytics request failed:', error)
+      }
+    }
+
+    const makeProjectsRequest = async () => {
+      try {
+        const response = await fetch('/api/projects?status=active')
+        const data = await response.json()
+        console.log('Projects data received:', data.length, 'projects')
+      } catch (error) {
+        console.error('Projects request failed:', error)
+      }
+    }
+
+    const makeUserActivityRequest = async () => {
+      try {
+        const response = await fetch('/api/user-activity')
+        const data = await response.json()
+        console.log('User activity data received for session:', data.sessionId)
+      } catch (error) {
+        console.error('User activity request failed:', error)
+      }
+    }
+
+    makeAnalyticsRequest()
+    makeProjectsRequest()
+    makeUserActivityRequest()
+
+    const intervalId = setInterval(() => {
+      makeAnalyticsRequest()
+      makeUserActivityRequest()
+    }, 5000)
+
+    return () => clearInterval(intervalId)
+  }, [])
+
   return (
     <>
       <Head>
