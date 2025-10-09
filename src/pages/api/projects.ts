@@ -14,6 +14,11 @@ type ProjectStats = {
     satisfaction: number
     completion: number
   }
+  // Extended fields for comparison
+  priority: 'high' | 'medium' | 'low'
+  budget: number
+  category: string
+  lastUpdated: string
 }
 
 const dummyProjects: ProjectStats[] = [
@@ -30,7 +35,11 @@ const dummyProjects: ProjectStats[] = [
       engagement: 87,
       satisfaction: 92,
       completion: 65
-    }
+    },
+    priority: 'high',
+    budget: 15000,
+    category: 'research',
+    lastUpdated: new Date().toISOString()
   },
   {
     id: 'proj_2',
@@ -45,7 +54,11 @@ const dummyProjects: ProjectStats[] = [
       engagement: 94,
       satisfaction: 89,
       completion: 78
-    }
+    },
+    priority: 'high',
+    budget: 8500,
+    category: 'community',
+    lastUpdated: new Date().toISOString()
   },
   {
     id: 'proj_3',
@@ -60,7 +73,11 @@ const dummyProjects: ProjectStats[] = [
       engagement: 91,
       satisfaction: 96,
       completion: 100
-    }
+    },
+    priority: 'medium',
+    budget: 5200,
+    category: 'support',
+    lastUpdated: new Date().toISOString()
   }
 ]
 

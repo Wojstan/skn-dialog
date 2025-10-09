@@ -20,6 +20,14 @@ type UserActivity = {
     city: string
     timezone: string
   }
+  // Extended fields for comparison
+  version: string
+  sessionType: 'new' | 'returning'
+  referrer: string | null
+  performance: {
+    loadTime: number
+    renderTime: number
+  }
 }
 
 export default function handler(
@@ -51,6 +59,14 @@ export default function handler(
         country: countries[Math.floor(Math.random() * countries.length)],
         city: cities[Math.floor(Math.random() * cities.length)],
         timezone: 'Europe/Warsaw'
+      },
+      // Extended fields
+      version: '1.0.5',
+      sessionType: Math.random() > 0.3 ? 'returning' : 'new',
+      referrer: Math.random() > 0.6 ? 'https://google.com' : null,
+      performance: {
+        loadTime: Math.floor(Math.random() * 2000) + 500,
+        renderTime: Math.floor(Math.random() * 1000) + 200
       }
     }
 
