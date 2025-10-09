@@ -22,11 +22,11 @@ export default function Home() {
       <DefaultLayout background="white">
         {/* Hero Section with Gradient Background */}
         <header className="relative">
-          <div className="bg-neural-gradient gradient-shift text-white min-h-screen flex items-center">
+          <div className="bg-neural-gradient text-white min-h-screen flex items-center">
             <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
                 <div className="inline-flex items-center space-x-2 glass-morphism rounded-full px-4 py-2">
-                  <FontAwesomeIcon icon={faGraduationCap} className="text-yellow-300 bounce-custom" />
+                  <FontAwesomeIcon icon={faGraduationCap} className="text-yellow-300" />
                   <span className="text-sm font-medium">Psychology Excellence Since 2011</span>
                 </div>
                 <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
@@ -34,11 +34,11 @@ export default function Home() {
                     {header.title}
                   </span>
                 </h1>
-                <p className="text-xl text-blue-100 max-w-lg leading-relaxed float-animation">
+                <p className="text-xl text-blue-100 max-w-lg leading-relaxed">
                   {header.text}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover-lift bg-cyber-gradient text-white pulse-glow cursor-pointer">
+                  <div className="px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover-lift bg-cyber-gradient text-white cursor-pointer">
                     🚀 Rozpocznij przygodę
                   </div>
                   <div className="px-8 py-4 text-lg font-semibold rounded-full glass-morphism hover:glass-morphism-dark transition-all text-white cursor-pointer neon-border">
@@ -47,9 +47,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-3xl blur-3xl opacity-30 pulse-glow"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-3xl blur-3xl opacity-30"></div>
                 <img 
-                  className="relative z-10 w-full h-auto rounded-3xl shadow-2xl hover-lift float-animation" 
+                  className="relative z-10 w-full h-auto rounded-3xl shadow-2xl hover-lift" 
                   src="/images/main.png" 
                   alt="SKN Dialog 2025" 
                 />
@@ -70,7 +70,7 @@ export default function Home() {
               ].map((stat, index) => (
                 <div key={index} className="glass-morphism rounded-2xl p-6 shadow-xl hover-lift neon-border">
                   <div className="text-center">
-                    <FontAwesomeIcon icon={stat.icon} className={`text-4xl text-purple-600 mb-4 ${index % 2 === 0 ? 'bounce-custom' : 'float-animation'}`} />
+                    <FontAwesomeIcon icon={stat.icon} className="text-4xl text-purple-600 mb-4" />
                     <div className="text-3xl font-bold text-gray-800 mb-2 neon-text">{stat.number}</div>
                     <div className="text-gray-600 font-medium">{stat.label}</div>
                   </div>
@@ -120,7 +120,7 @@ export default function Home() {
                         <div className="mt-6">
                           <div className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 cursor-pointer">
                             Dowiedz się więcej 
-                            <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
                           </div>
@@ -136,12 +136,7 @@ export default function Home() {
 
         {/* Projects Section with Modern Grid */}
         <section className="py-24 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
-          {/* Background Animation */}
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          </div>
-          
+          {/* Background Animation Removed */}
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-16">
               <div className="inline-flex items-center space-x-2 bg-white/10 rounded-full px-6 py-3 mb-6 backdrop-blur-sm">
@@ -196,21 +191,15 @@ export default function Home() {
 
         {/* Newsletter Section with Interactive Design */}
         <section className="py-24 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-600 relative overflow-hidden">
-          {/* Animated Background Elements */}
-          <div className="absolute inset-0">
-            <div className="absolute top-10 left-10 w-32 h-32 border-4 border-white/20 rounded-full animate-spin slow"></div>
-            <div className="absolute bottom-10 right-10 w-48 h-48 border-4 border-yellow-300/30 rounded-full animate-pulse"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border-2 border-white/10 rounded-full animate-ping slow"></div>
-          </div>
-          
+          {/* Animated Background Elements Removed */}
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-8">
                 <div className="inline-flex items-center space-x-4 mb-6">
-                  <FontAwesomeIcon icon={faEnvelope} className="text-6xl text-yellow-300 animate-bounce" />
-                  <FontAwesomeIcon icon={faMailBulk} className="text-5xl text-white/80 animate-pulse" />
-                  <FontAwesomeIcon icon={faMailForward} className="text-6xl text-pink-300 animate-bounce delay-300" />
-                  <FontAwesomeIcon icon={faMailReply} className="text-5xl text-white/80 animate-pulse delay-500" />
+                  <FontAwesomeIcon icon={faEnvelope} className="text-6xl text-yellow-300" />
+                  <FontAwesomeIcon icon={faMailBulk} className="text-5xl text-white/80" />
+                  <FontAwesomeIcon icon={faMailForward} className="text-6xl text-pink-300" />
+                  <FontAwesomeIcon icon={faMailReply} className="text-5xl text-white/80" />
                 </div>
                 <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
                   {newsletter.title}
