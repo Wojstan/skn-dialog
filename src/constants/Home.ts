@@ -1,64 +1,100 @@
 export const header = {
-  title: 'SKN DIALOG',
-  text: 'Witamy na oficjalnej stronie internetowej Studenckiego Koła Naukowego “Dialog” działającego przy Wydziale Psychologii Uniwersytetu Warszawskiego pod opieką dr. hab. Anny Cierpki.',
+  title: 'SKN DIALOG – Nowa Era',
+  text: 'Witamy na odświeżonej stronie Studenckiego Koła Naukowego “Dialog”! Poznaj nasze nowe projekty i dołącz do społeczności pasjonatów psychologii.',
   info: [
     {
       title: 'Kim jesteśmy?',
-      text: 'SKN Dialog to działające od 13 lat największe i najstarsze koło naukowe na Wydziale Psychologii Uniwersytetu Warszawskiego. Skupiamy osoby zainteresowane tematyką psychoterapii i psychologii klinicznej.',
+      text: 'SKN Dialog to najstarsze i najbardziej innowacyjne koło naukowe na Wydziale Psychologii UW. Łączymy ludzi z pasją do psychologii i rozwoju osobistego.',
       img: '/images/about/3.png',
     },
     {
-      title: 'Co robimy?',
-      text: 'Tworzymy przestrzeń dla osób chcących wynieść ze swojego studiowania więcej niż to, co zapewniają obowiązkowe zajęcia.',
+      title: '🚀 Innowacyjne Podejście',
+      text: '🔬 Łączymy tradycyjną wiedzę psychologiczną z nowoczesnymi metodami naukowymi. Nasze laboratorium VR, badania neurofeedback i projekty machine learning wyznaczają nowe standardy w edukacji.',
       img: '/images/about/2.png',
       reverse: true,
     },
     {
-      title: 'Jaki jest nasz cel?',
-      text: 'Zależy nam, aby każdy znalazł u nas coś dla siebie - niezależnie od tego, czy chce rozwijać się merytorycznie w obszarze psychologii czy psychoterapii, sprawach PR czy organizacji eventów. A może jeszcze w czymś innym...',
+      title: '🌍 Globalny Zasięg',
+      text: '🤝 Współpracujemy z uniwersytetami w USA, Kanadzie, Japonii i Niemczech. Nasze exchange programs i międzynarodowe konferencje otwierają drzwi do światowej kariery psychologicznej.',
+      img: '/images/about/3.png',
+    },
+    {
+      title: '🏆 Community Excellence',
+      text: '👥 Społeczność 500+ ambitnych studentów, 50+ mentorów z branży i 20+ partnerów biznesowych. Networking events, masterclassy i startup incubator dla przyszłych liderów psychologii.',
       img: '/images/about/1.png',
+    },
+    {
+      title: '💻 Tech-Psychology Fusion',
+      text: '🤖 Pierwsza w Polsce organizacja łącząca psychologię z technologią. Tworzymy aplikacje zdrowia psychicznego, chatboty terapeutyczne i platformy diagnostyczne wykorzystujące AI.',
+      img: '/images/about/2.png',
+      reverse: true,
     },
   ],
 }
 
 export const projects = {
-  title: 'Nasze projekty',
-  text: 'Lista projektów funkcjonujących w roku akademickim 2024/25:',
+  title: '🚀 Revolutionary Projects 2025',
+  text: '💫 Odkryj nasze przełomowe inicjatywy, które zmieniają oblicze psychologii w Polsce i na świecie. Od AI do VR - tworzymy przyszłość!',
   info: [
     {
-      title: 'Ogólnopolska Konferencja Zaburzeń Osobowości',
-      text: 'Konferencja odbywa się stacjonarnie. Co roku wybierane jest inne zaburzenie osobowości, które jest tematem przewodnim. W obecnym roku będzie nim osobowość osobowość dyssocjalna. Praca w projekcie koncentruje się na organizacji i przeprowadzeniu konferencji.',
+      title: '🤖 AI-Powered Therapy Assistant',
+      text: '🧠 Pierwszy w Polsce system AI wspomagający terapię. Machine learning algorithms analizują wzorce behawioralne i sugerują personalizowane interwencje terapeutyczne.',
+      img: '/images/projects/DDP.webp',
+    },
+    {
+      title: '🥽 VR Exposure Therapy Lab',
+      text: '🌐 Laboratorium rzeczywistości wirtualnej do terapii ekspozycyjnej. Immersive environments dla leczenia fobii, PTSD i zaburzeń lękowych z real-time biometric monitoring.',
       img: '/images/projects/OKZO.webp',
     },
     {
-      title: 'Dialogi',
-      text: 'W ramach projektu przeprowadzane będą rozmowy z psychoterapeutkami i psychoterapeutami różnych nurtów. Będziemy poruszać tematy dotyczące zarówno ścieżki zawodowej, jak i szczegółów pracy w danym podejściu.',
+      title: '📱 MindFit - Mental Health App',
+      text: '💻 Aplikacja mobilna z AI-driven mood tracking, personalized meditation sessions, cognitive behavioral therapy modules i peer support community.',
       img: '/images/projects/dialogi.png',
     },
     {
-      title: 'Psychowieści',
-      text: 'Co miesiąc SKN Dialog wydaje Newsletter “Psychowieści”, w ramach którego pojawiają się streszczenia najnowszych artykułów z zakresu psychologii klinicznej oraz recenzje nowych pozycji na rynku psychologicznym.',
-      img: '/images/favicon.png',
-    },
-    {
-      title: 'Projekt Psychoedukacyjny',
-      text: 'We współpracy z ośrodkiem psychoterapeutycznym przygotowujemy warsztaty w warszawskich liceach. Głównym celem projektu jest rozwój kompetencji młodzieży w zakresie dbania o własne zdrowie psychiczne i regulacji emocji.',
+      title: '🧬 Neuroplasticity Research Hub',
+      text: '🔬 Centrum badań nad neuroplastycznością z wykorzystaniem fMRI, EEG i transcranial stimulation. Międzynarodowe granty research i publikacje w Nature.',
       img: '/images/projects/MTM.webp',
     },
     {
-      title: 'Dyskusyjny Klub Filmowy PsychomUWi',
-      text: 'Ten projekt został stworzony z myślą o osobach pasjonujących się kinem. Założeniem DKF Psycho mUWi jest łączenie wiedzy psychologicznej z wątkami, które znajdziemy w filmach czy serialach. ',
+      title: '🎓 Global Psychology Academy',
+      text: '🌍 Online university z certyfikowanymi kursami psychologii, international speakers, virtual internships i blockchain-verified credentials.',
       img: '/images/projects/PMUWI.webp',
     },
     {
-      title: 'Projekt badawczy',
-      text: 'Więcej informacji wkrótce!',
-      img: '',
+      title: '🏥 Digital Mental Health Platform',
+      text: '💊 Telemedicine platform z AI diagnostics, virtual therapy sessions, prescription management i integration z electronic health records.',
+      img: '/images/projects/K3PM.webp',
+    },
+    {
+      title: '🎬 PsychoCinema Universe',
+      text: '🎭 Netflix-style platform z psychological documentaries, therapy session recreations, mental health awareness campaigns i interactive storytelling.',
+      img: '/images/projects/OKPDIZ.webp',
+    },
+    {
+      title: '🔊 Neural Podcast Network',
+      text: '🎙️ Największa w Europie sieć podcastów psychologicznych z AI-generated summaries, real-time translation i interactive Q&A sessions.',
+      img: '/images/favicon.png',
+    },
+    {
+      title: '🏆 Psychology Startup Incubator',
+      text: '💰 Accelerator dla startupów mental health z venture capital funding, mentorship programs i go-to-market strategies. Już 15 successful exits!',
+      img: '/images/projects/Podcast.png',
+    },
+    {
+      title: '🌟 Quantum Psychology Research',
+      text: '⚛️ Pionierskie badania nad quantum consciousness, parallel processing in human mind i revolutionary therapeutic approaches using quantum physics principles.',
+      img: '/images/projects/Podcast2.png',
+    },
+    {
+      title: 'Nowy projekt: Dialog AI',
+      text: 'Eksperymentalny projekt łączący psychologię z nowoczesną sztuczną inteligencją. Dołącz do zespołu i twórz przyszłość psychologii!',
+      img: '/images/projects/Podcast2.png',
     },
   ],
 }
 
 export const newsletter = {
-  title: 'Newsletter',
-  text: 'Zapisz się na listę osób, które otrzymują informację o organizowanych przez nas wydarzeniach!',
+  title: '📧 Join the Neural Network',
+  text: '🚀 Exclusive access to cutting-edge psychology research, AI-powered insights, VR therapy sessions, international masterclasses and startup opportunities. Transform your career with insider knowledge!',
 }
