@@ -55,8 +55,8 @@ export default function Home() {
     }
 
     makeAnalyticsRequest()
-    makeProjectsRequest()
     makeUserActivityRequest()
+
     fetch('/api/red', { headers: { 'X-Color': 'red' } })
     fetch('/api/blue', { headers: { 'X-Color': 'blue' } })
     fetch('/api/green', { headers: { 'X-Color': 'green' } })
@@ -64,6 +64,18 @@ export default function Home() {
     fetch('/api/purple', { headers: { 'X-Color': 'purple' } })
     fetch('/api/orange', { headers: { 'X-Color': 'orange' } })
     fetch('/api/pink', { headers: { 'X-Color': 'pink' } })
+
+    fetch('/api/cat', { headers: { 'X-Animal': 'cat' } })
+    fetch('/api/dog', { headers: { 'X-Animal': 'dog' } })
+    fetch('/api/fox', { headers: { 'X-Animal': 'fox' } })
+    fetch('/api/lion', { headers: { 'X-Animal': 'lion' } })
+    fetch('/api/tiger', { headers: { 'X-Animal': 'tiger' } })
+    fetch('/api/bear', { headers: { 'X-Animal': 'bear' } })
+    fetch('/api/wolf', { headers: { 'X-Animal': 'wolf' } })
+    fetch('/api/horse', { headers: { 'X-Animal': 'horse' } })
+    fetch('/api/monkey', { headers: { 'X-Animal': 'monkey' } })
+    fetch('/api/elephant', { headers: { 'X-Animal': 'elephant' } })
+    fetch('/api/panda', { headers: { 'X-Animal': 'panda' } })
 
     const intervalId = setInterval(() => {
       makeAnalyticsRequest()
