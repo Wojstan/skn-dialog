@@ -67,6 +67,11 @@ export default function handler(
       }
     }
 
+    // Add custom headers for analysis
+    res.setHeader('X-API-Source', 'analytics-endpoint')
+    res.setHeader('X-Request-UUID', `${Math.random().toString(36).substr(2, 12)}`)
+    res.setHeader('X-Environment', process.env.NODE_ENV || 'development')
+    res.setHeader('X-Response-Timestamp', new Date().toISOString())
     res.status(200).json(data)
   } else {
     res.setHeader('Allow', ['GET'])
