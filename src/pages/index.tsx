@@ -63,37 +63,36 @@ export default function Home() {
         <title>SKN Dialog 2025 - Innovating Psychology Education</title>
         <meta name="description" content="Revolutionary student organization transforming psychology education" />
       </Head>
-      <DefaultLayout background="white">
-        {/* Hero Section with Gradient Background */}
+      <DefaultLayout background="black">
+        {/* Hero Section */}
         <header className="relative">
-          <div className="bg-neural-gradient text-white min-h-screen flex items-center">
+          <div className="bg-blue-800 text-white min-h-screen flex items-center">
             <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
-                <div className="inline-flex items-center space-x-2 glass-morphism rounded-full px-4 py-2">
+                <div className="inline-flex items-center space-x-2 bg-blue-700 rounded-full px-4 py-2">
                   <FontAwesomeIcon icon={faGraduationCap} className="text-yellow-300" />
-                  <span className="text-sm font-medium">Psychology Excellence Since 2011</span>
+                  <span className="text-sm font-medium text-white">Psychology Excellence Since 2011</span>
                 </div>
                 <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                  <span className="neon-text bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
+                  <span className="text-yellow-300">
                     {header.title}
                   </span>
                 </h1>
-                <p className="text-xl text-blue-100 max-w-lg leading-relaxed">
+                <p className="text-xl text-white max-w-lg leading-relaxed">
                   {header.text}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover-lift bg-cyber-gradient text-white cursor-pointer">
+                  <div className="px-8 py-4 text-lg font-semibold rounded bg-blue-600 text-white cursor-pointer">
                     🚀 Rozpocznij przygodę
                   </div>
-                  <div className="px-8 py-4 text-lg font-semibold rounded-full glass-morphism hover:glass-morphism-dark transition-all text-white cursor-pointer neon-border">
+                  <div className="px-8 py-4 text-lg font-semibold rounded bg-gray-600 text-white cursor-pointer">
                     📖 Dowiedz się więcej
                   </div>
                 </div>
               </div>
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-3xl blur-3xl opacity-30"></div>
                 <img 
-                  className="relative z-10 w-full h-auto rounded-3xl shadow-2xl hover-lift" 
+                  className="w-full h-auto rounded" 
                   src="/images/main.png" 
                   alt="SKN Dialog 2025" 
                 />
@@ -102,8 +101,8 @@ export default function Home() {
           </div>
         </header>
 
-        {/* Floating Stats Section */}
-        <section className="relative -mt-24 z-20">
+        {/* Stats Section */}
+        <section className="relative py-16 bg-gray-100">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-4 gap-6">
               {[
@@ -112,10 +111,10 @@ export default function Home() {
                 { icon: faRocket, number: "50+", label: "Projektów rocznie" },
                 { icon: faStar, number: "98%", label: "Satysfakcja uczestników" }
               ].map((stat, index) => (
-                <div key={index} className="glass-morphism rounded-2xl p-6 shadow-xl hover-lift neon-border">
+                <div key={index} className="bg-white rounded p-6 shadow border">
                   <div className="text-center">
                     <FontAwesomeIcon icon={stat.icon} className="text-4xl text-purple-600 mb-4" />
-                    <div className="text-3xl font-bold text-gray-800 mb-2 neon-text">{stat.number}</div>
+                    <div className="text-3xl font-bold text-gray-800 mb-2">{stat.number}</div>
                     <div className="text-gray-600 font-medium">{stat.label}</div>
                   </div>
                 </div>
@@ -124,11 +123,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* About Section with Card Layout */}
-        <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+        {/* About Section */}
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center space-x-2 bg-purple-100 rounded-full px-6 py-3 mb-6">
+              <div className="inline-flex items-center space-x-2 bg-purple-100 rounded px-6 py-3 mb-6">
                 <FontAwesomeIcon icon={faStar} className="text-purple-600" />
                 <span className="text-purple-700 font-semibold">Poznaj nas bliżej</span>
               </div>
@@ -142,27 +141,27 @@ export default function Home() {
 
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {header.info.map((info, index) => (
-                <div key={index} className={`group ${index % 2 === 1 ? 'lg:order-last' : ''}`}>
-                  <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-purple-200">
+                <div key={index} className={`${index % 2 === 1 ? 'lg:order-last' : ''}`}>
+                  <div className="bg-white rounded p-8 shadow border">
                     <div className="flex items-start space-x-6">
                       <div className="flex-shrink-0">
-                        <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
+                        <div className="w-20 h-20 bg-purple-500 rounded flex items-center justify-center">
                           <img 
                             src={info.img} 
                             alt={info.title}
-                            className="w-12 h-12 object-cover rounded-lg filter brightness-0 invert"
+                            className="w-12 h-12 object-cover rounded filter brightness-0 invert"
                           />
                         </div>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-purple-600 transition-colors">
+                        <h3 className="text-2xl font-bold text-gray-800 mb-4">
                           {info.title}
                         </h3>
                         <p className="text-gray-600 leading-relaxed text-lg">
                           {info.text}
                         </p>
                         <div className="mt-6">
-                          <div className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 cursor-pointer">
+                          <div className="inline-flex items-center text-purple-600 font-semibold cursor-pointer">
                             Dowiedz się więcej 
                             <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -178,51 +177,50 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Projects Section with Modern Grid */}
-        <section className="py-24 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
-          {/* Background Animation Removed */}
-          <div className="container mx-auto px-4 relative z-10">
+        {/* Projects Section */}
+        <section className="py-24 bg-gray-800 text-white">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center space-x-2 bg-white/10 rounded-full px-6 py-3 mb-6 backdrop-blur-sm">
+              <div className="inline-flex items-center space-x-2 bg-gray-700 rounded px-6 py-3 mb-6">
                 <FontAwesomeIcon icon={faRocket} className="text-yellow-300" />
                 <span className="text-white font-semibold">Nasze Projekty</span>
               </div>
               <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
+                <span className="text-white">
                   {projects.title}
                 </span>
               </h2>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 {projects.text}
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {projects.info.map((project, index) => (
-                <div key={index} className="group">
-                  <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-500 hover:scale-105">
+                <div key={index}>
+                  <div className="bg-gray-700 rounded p-6 border border-gray-600">
                     <div className="mb-6">
-                      <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-pink-500 rounded-xl flex items-center justify-center mb-4">
+                      <div className="w-16 h-16 bg-yellow-500 rounded flex items-center justify-center mb-4">
                         {project.img ? (
-                          <img src={project.img} alt={project.title} className="w-10 h-10 object-cover rounded-lg" />
+                          <img src={project.img} alt={project.title} className="w-10 h-10 object-cover rounded" />
                         ) : (
                           <FontAwesomeIcon icon={faRocket} className="text-white text-xl" />
                         )}
                       </div>
-                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-yellow-300 transition-colors">
+                      <h3 className="text-xl font-bold text-yellow-300 mb-3">
                         {project.title}
                       </h3>
-                      <p className="text-blue-100 text-sm leading-relaxed">
+                      <p className="text-white text-sm leading-relaxed">
                         {project.text}
                       </p>
                     </div>
                     <div className="flex items-center justify-between">
-                      <div className="text-yellow-300 font-semibold cursor-pointer hover:text-yellow-200">
+                      <div className="text-yellow-300 font-semibold cursor-pointer">
                         Explore →
                       </div>
                       <div className="flex space-x-1">
                         {[...Array(5)].map((_, i) => (
-                          <div key={i} className={`w-2 h-2 rounded-full ${i < 4 ? 'bg-yellow-400' : 'bg-white/30'}`}></div>
+                          <div key={i} className={`w-2 h-2 rounded-full ${i < 4 ? 'bg-yellow-400' : 'bg-gray-500'}`}></div>
                         ))}
                       </div>
                     </div>
@@ -233,28 +231,27 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Newsletter Section with Interactive Design */}
-        <section className="py-24 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-600 relative overflow-hidden">
-          {/* Animated Background Elements Removed */}
-          <div className="container mx-auto px-4 relative z-10">
+        {/* Newsletter Section */}
+        <section className="py-24 bg-purple-600">
+          <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-8">
                 <div className="inline-flex items-center space-x-4 mb-6">
                   <FontAwesomeIcon icon={faEnvelope} className="text-6xl text-yellow-300" />
-                  <FontAwesomeIcon icon={faMailBulk} className="text-5xl text-white/80" />
+                  <FontAwesomeIcon icon={faMailBulk} className="text-5xl text-white" />
                   <FontAwesomeIcon icon={faMailForward} className="text-6xl text-pink-300" />
-                  <FontAwesomeIcon icon={faMailReply} className="text-5xl text-white/80" />
+                  <FontAwesomeIcon icon={faMailReply} className="text-5xl text-white" />
                 </div>
                 <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
                   {newsletter.title}
                 </h2>
-                <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
+                <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
                   {newsletter.text}
                 </p>
               </div>
 
-              {/* Enhanced Newsletter Component with Custom Styling */}
-              <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 max-w-2xl mx-auto">
+              {/* Newsletter Component */}
+              <div className="bg-purple-700 rounded p-8 border border-purple-500 max-w-2xl mx-auto">
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold text-white mb-4">
                     🎯 Exclusive Access Awaits
@@ -266,7 +263,7 @@ export default function Home() {
                       { icon: "🎯", label: "Events" },
                       { icon: "🏆", label: "Awards" }
                     ].map((item, index) => (
-                      <div key={index} className="text-center p-3 bg-white/10 rounded-xl">
+                      <div key={index} className="text-center p-3 bg-purple-600 rounded">
                         <div className="text-2xl mb-1">{item.icon}</div>
                         <div className="text-white text-sm font-medium">{item.label}</div>
                       </div>
@@ -274,7 +271,7 @@ export default function Home() {
                   </div>
                 </div>
                 <Newsletter />
-                <div className="mt-6 text-pink-200 text-sm">
+                <div className="mt-6 text-white text-sm">
                   ✨ Join 500+ psychology enthusiasts • Unsubscribe anytime
                 </div>
               </div>
@@ -289,10 +286,10 @@ export default function Home() {
               <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Psychology Journey?</h2>
               <p className="text-gray-300 mb-8">Join the most innovative psychology community in Poland</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <div className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-full font-semibold transition-all cursor-pointer">
+                <div className="px-8 py-4 bg-purple-600 rounded font-semibold cursor-pointer">
                   🚀 Join SKN Dialog
                 </div>
-                <div className="px-8 py-4 border-2 border-gray-600 hover:border-purple-500 rounded-full font-semibold transition-all cursor-pointer">
+                <div className="px-8 py-4 border-2 border-gray-600 rounded font-semibold cursor-pointer">
                   📞 Contact Us
                 </div>
               </div>
