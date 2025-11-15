@@ -28,13 +28,13 @@ export default function Home() {
         </header>
 
         <section className="bg-gray" id="main">
-          <article className="container m-auto p-3">
-            <div className="text-center mt-10 mb-24">
+          <article className="container m-auto p-3 my-10">
+            <div className="text-center space-y-6">
               <Title>{header.title}</Title>
               <Description>{header.text}</Description>
             </div>
 
-            <ul>
+            <ul className="space-y-6">
               {header.info.map((info, index) => (
                 <InfoBlock key={index} content={info} />
               ))}
@@ -60,11 +60,9 @@ export default function Home() {
         </section>
 
         <section className="bg-gray">
-          <article className="container m-auto text-center mt-20 pb-20 md:pt-0 px-2">
+          <article className="container m-auto text-center mt-20 pb-20 md:pt-0 space-y-6">
             <Subtitle>{newsletter.title}</Subtitle>
             <Description>{newsletter.text}</Description>
-
-            <FontAwesomeIcon className='text-pink text-[3rem] mt-3' icon={faEnvelope} />
 
             <Newsletter />
           </article>
