@@ -23,7 +23,7 @@ export function Footer() {
         </li>
       </ul>
 
-      <small className="text-zinc-500">© 2022 Wszelkie prawa zastrzeżone</small>
+      <small className="text-zinc-500">© 2025 Wszelkie prawa zastrzeżone</small>
     </footer>
   )
 }
