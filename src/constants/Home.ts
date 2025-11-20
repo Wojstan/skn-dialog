@@ -52,7 +52,7 @@ export const projects = {
     },
     {
       title: 'Projekt badawczy',
-      text: 'Więcej informacji wkrótce!',
+      text: 'Sekcja stworzona dla osób zainteresowanych w przyszłości pracą naukową. W jej obrębie przeprowadzamy autorskie badania naukowe.',
       img: '',
     },
   ],
