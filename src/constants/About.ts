@@ -28,7 +28,7 @@ export const administration = {
       img: '/images/team/nk.png',
     },
     {
-      title: 'Gabriela Kucharska',
+      title: 'Gabriela Rejnhard',
       text: 'Członkini Zarządu',
       img: '/images/team/gk.png',
     },
