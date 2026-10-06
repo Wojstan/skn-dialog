@@ -1,6 +1,5 @@
 import { administration, header, protector } from 'constants/About'
 import { Waves } from 'components/Common/Waves'
-import { ContentBlock } from 'components/Common/ContentBlock'
 import { DefaultLayout } from 'components/Layout/DefaultLayout'
 import { Title } from 'components/Common/Title'
 import { Description } from 'components/Common/Description'
@@ -25,18 +24,38 @@ export default function About() {
 
         <Waves rotate />
 
-        <section id="team">
-          <article className="container m-auto text-center mb-10">
-            <Subtitle>{administration.title}</Subtitle>
-            <Description>{administration.text}</Description>
-          </article>
+<section id="team">
+  <article className="container m-auto text-center mb-16 px-4">
+    <Subtitle>{administration.title}</Subtitle>
+    <Description>{administration.text}</Description>
+  </article>
 
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-16">
-            {administration.info.map((project, index) => (
-              <ContentBlock content={project} key={index} margin={3} />
-            ))}
-          </div>
-        </section>
+  <div className="container m-auto px-4">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      {administration.info.map((person) => (
+        <article key={person.name} className="text-center">
+          {person.image ? (
+            <img
+              src={person.image}
+              alt={person.name}
+              className="w-28 h-28 object-cover rounded-full mx-auto"
+            />
+          ) : (
+            <div className="w-28 h-28 rounded-full bg-lighterBlue mx-auto" />
+          )}
+
+          <h3 className="mt-6 text-xl font-regular text-blue">
+            {person.name}
+          </h3>
+
+          <p className="mt-2 text-pink">
+            {person.role}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
 
         <section id="protector" className="bg-white">
           <Waves rotate />

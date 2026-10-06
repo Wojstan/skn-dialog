@@ -1,6 +1,6 @@
 export const header = {
-  title: 'KIM JESTEŚMY?',
-  text: 'SKN Dialog to działające od 12 lat największe koło naukowe na Wydziale Psychologii Uniwersytetu Warszawskiego. Skupiamy osoby zainteresowane tematyką psychoterapii i psychologii klinicznej.',
+  title: 'Kim jesteśmy?',
+  text: 'SKN Dialog to działające od ponad 15 lat największe koło naukowe na Wydziale Psychologii Uniwersytetu Warszawskiego. Skupiamy osoby zainteresowane tematyką psychoterapii i psychologii klinicznej.',
 }
 
 export const protector = {
@@ -10,27 +10,27 @@ export const protector = {
 
 export const administration = {
   title: 'Zarząd',
-  text: 'Rok akademicki 2024/25',
+  text: 'Rok akademicki 2026/27',
   info: [
-        {
-      title: 'Wiktoria Vincent Kopecka',
-      text: 'Prezes Koła',
-      img: '/images/team/wvk.png',
+    {
+      name: 'Gabriela Rejnhard',
+      role: 'Prezeska Koła',
+      image: '/images/team/gk.png',
     },
     {
-      title: 'Julia Miążek',
-      text: 'Wiceprezeska Koła',
-      img: '/images/team/jm.png',
+      name: 'Wiktoria Vincent Kopecka',
+      role: 'Prezes Koła',
+      image: '/images/team/wvk.png',
     },
     {
-      title: 'Natalia Koźmińska',
-      text: 'Członkini Zarządu',
-      img: '/images/team/nk.png',
+      name: 'Łucja Niziołek',
+      role: 'Członkini Zarządu',
+      image: '/images/team/ln.JPG',
     },
     {
-      title: 'Gabriela Rejnhard',
-      text: 'Członkini Zarządu',
-      img: '/images/team/gk.png',
+      name: 'Zofia Lutek',
+      role: 'Członkini Zarządu',
+      image: '/images/team/zl.jpeg',
     },
   ],
 }

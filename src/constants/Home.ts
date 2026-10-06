@@ -4,7 +4,7 @@ export const header = {
   info: [
     {
       title: 'Kim jesteśmy?',
-      text: 'SKN Dialog to działające od 13 lat największe i najstarsze koło naukowe na Wydziale Psychologii Uniwersytetu Warszawskiego. Skupiamy osoby zainteresowane tematyką psychoterapii i psychologii klinicznej.',
+      text: 'SKN Dialog to działające od ponad 15 lat największe koło naukowe na Wydziale Psychologii Uniwersytetu Warszawskiego. Skupiamy osoby zainteresowane tematyką psychoterapii i psychologii klinicznej.',
       img: '/images/about/3.png',
     },
     {
@@ -23,7 +23,7 @@ export const header = {
 
 export const projects = {
   title: 'Nasze projekty',
-  text: 'Lista projektów funkcjonujących w roku akademickim 2024/25:',
+  text: 'Lista projektów funkcjonujących w roku akademickim 2026/27:',
   info: [
     {
       title: 'Ogólnopolska Konferencja Zaburzeń Osobowości',
